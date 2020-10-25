@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="234aab81-1b0e-4cf4-9854-f5130038c6f7" name="默认的" comment="" />
+    <list default="true" id="234aab81-1b0e-4cf4-9854-f5130038c6f7" name="默认的" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/string/char.go" beforeDir="false" afterPath="$PROJECT_DIR$/string/char.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,12 +19,19 @@
     </option>
   </component>
   <component name="GOROOT" path="C:\Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1jEBBjxqKbu4USE4QluhxH0zkwZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="新增" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -37,59 +48,59 @@
       <recent name="D:\go\src\go-practice\string" />
     </key>
   </component>
-  <component name="RunManager" selected="Go 构建.go build char.go">
-    <configuration name="go build char.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go 构建.go build point.go">
+    <configuration name="go build anonyFunc.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-practice" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/string/char.go" />
+      <filePath value="$PROJECT_DIR$/func/anonyFunc.go" />
       <package value="go-practice" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go-practice/string (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build bibao.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go-practice" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/func/bibao.go" />
+      <package value="go-practice" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build error.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go-practice" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/func/error.go" />
+      <package value="go-practice" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build go-practice/func" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-practice" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/string/char.go" />
-      <package value="go-practice/string" />
+      <filePath value="$PROJECT_DIR$/func/anonyFunc.go" />
+      <package value="go-practice/func" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go-practice/string" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build point.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-practice" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/string/strfunc.go" />
-      <package value="go-practice/string" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build string.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go-practice" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/string/string.go" />
-      <package value="go-practice" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build string.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go-practice" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/string.go" />
+      <filePath value="$PROJECT_DIR$/point/point.go" />
       <package value="go-practice" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go 构建.go build char.go" />
-        <item itemvalue="Go 构建.go build go-practice/string (1)" />
-        <item itemvalue="Go 构建.go build go-practice/string" />
-        <item itemvalue="Go 构建.go build string.go (1)" />
-        <item itemvalue="Go 构建.go build string.go" />
+        <item itemvalue="Go 构建.go build point.go" />
+        <item itemvalue="Go 构建.go build error.go" />
+        <item itemvalue="Go 构建.go build bibao.go" />
+        <item itemvalue="Go 构建.go build anonyFunc.go" />
+        <item itemvalue="Go 构建.go build go-practice/func" />
       </list>
     </recent_temporary>
   </component>
@@ -106,25 +117,29 @@
       <screen x="-3840" y="-801" width="2194" height="1194" />
     </state>
     <state x="-2812" y="-492" key="FileChooserDialogImpl/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603360458259" />
-    <state width="2151" height="326" key="GridCell.Tab.0.bottom" timestamp="1603457873943">
+    <state width="2151" height="326" key="GridCell.Tab.0.bottom" timestamp="1603644849822">
       <screen x="-3840" y="-801" width="2194" height="1194" />
     </state>
-    <state width="2151" height="326" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603457873943" />
-    <state width="2151" height="326" key="GridCell.Tab.0.center" timestamp="1603457873943">
+    <state width="2151" height="326" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603644849822" />
+    <state width="2151" height="326" key="GridCell.Tab.0.center" timestamp="1603644849822">
       <screen x="-3840" y="-801" width="2194" height="1194" />
     </state>
-    <state width="2151" height="326" key="GridCell.Tab.0.center/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603457873943" />
-    <state width="2151" height="326" key="GridCell.Tab.0.left" timestamp="1603457873943">
+    <state width="2151" height="326" key="GridCell.Tab.0.center/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603644849822" />
+    <state width="2151" height="326" key="GridCell.Tab.0.left" timestamp="1603644849822">
       <screen x="-3840" y="-801" width="2194" height="1194" />
     </state>
-    <state width="2151" height="326" key="GridCell.Tab.0.left/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603457873943" />
-    <state width="2151" height="326" key="GridCell.Tab.0.right" timestamp="1603457873943">
+    <state width="2151" height="326" key="GridCell.Tab.0.left/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603644849822" />
+    <state width="2151" height="326" key="GridCell.Tab.0.right" timestamp="1603644849822">
       <screen x="-3840" y="-801" width="2194" height="1194" />
     </state>
-    <state width="2151" height="326" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603457873943" />
+    <state width="2151" height="326" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603644849822" />
     <state x="-3394" y="-511" key="SettingsEditor" timestamp="1603449318521">
       <screen x="-3840" y="-801" width="2194" height="1194" />
     </state>
     <state x="-3394" y="-511" key="SettingsEditor/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603449318521" />
+    <state x="-3039" y="-630" width="591" height="852" key="find.popup" timestamp="1603643968516">
+      <screen x="-3840" y="-801" width="2194" height="1194" />
+    </state>
+    <state x="-3039" y="-630" width="591" height="852" key="find.popup/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603643968516" />
   </component>
 </project>
