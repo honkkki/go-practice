@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="234aab81-1b0e-4cf4-9854-f5130038c6f7" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/string/char.go" beforeDir="false" afterPath="$PROJECT_DIR$/string/char.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/func/bibao.go" beforeDir="false" afterPath="$PROJECT_DIR$/func/bibao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/func/defer.go" beforeDir="false" afterPath="$PROJECT_DIR$/func/defer.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +14,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="tsconfig.json" />
         <option value="Go File" />
       </list>
     </option>
@@ -33,6 +34,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="GO_FMT" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.全局.GOPATH.is.expanded" value="true" />
@@ -41,66 +43,66 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\go\src\go-practice\string" />
     </key>
   </component>
-  <component name="RunManager" selected="Go 构建.go build point.go">
-    <configuration name="go build anonyFunc.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go 构建.go build main.go (1)">
+    <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-practice" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/func/anonyFunc.go" />
+      <filePath value="$PROJECT_DIR$/package/main/main.go" />
       <package value="go-practice" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build bibao.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-practice" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/func/bibao.go" />
+      <filePath value="$PROJECT_DIR$/studentSystem/main.go" />
       <package value="go-practice" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build error.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build package.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-practice" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/func/error.go" />
+      <filePath value="$PROJECT_DIR$/package/package.go" />
       <package value="go-practice" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go-practice/func" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go-practice" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/func/anonyFunc.go" />
-      <package value="go-practice/func" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build point.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build slice.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-practice" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/point/point.go" />
+      <filePath value="$PROJECT_DIR$/slice/slice.go" />
+      <package value="go-practice" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build struct.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go-practice" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/struct/struct.go" />
       <package value="go-practice" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go 构建.go build point.go" />
-        <item itemvalue="Go 构建.go build error.go" />
-        <item itemvalue="Go 构建.go build bibao.go" />
-        <item itemvalue="Go 构建.go build anonyFunc.go" />
-        <item itemvalue="Go 构建.go build go-practice/func" />
+        <item itemvalue="Go 构建.go build main.go (1)" />
+        <item itemvalue="Go 构建.go build package.go" />
+        <item itemvalue="Go 构建.go build slice.go" />
+        <item itemvalue="Go 构建.go build struct.go" />
+        <item itemvalue="Go 构建.go build main.go" />
       </list>
     </recent_temporary>
   </component>
@@ -108,35 +110,59 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="-2950" y="-277" key="#GOROOT" timestamp="1603359266664">
       <screen x="-3840" y="-801" width="2194" height="1194" />
     </state>
     <state x="-2950" y="-277" key="#GOROOT/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603359266664" />
+    <state x="-2909" y="-414" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603645513245">
+      <screen x="-3840" y="-801" width="2194" height="1194" />
+    </state>
+    <state x="-2909" y="-414" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603645513245" />
+    <state x="-2943" y="-500" key="#com.intellij.ide.util.MemberChooser" timestamp="1603700891905">
+      <screen x="-3840" y="-801" width="2194" height="1194" />
+    </state>
+    <state x="-2943" y="-500" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603700891905" />
+    <state x="-3060" y="-716" key="CommitChangelistDialog2" timestamp="1603645579424">
+      <screen x="-3840" y="-801" width="2194" height="1194" />
+    </state>
+    <state x="-3060" y="-716" key="CommitChangelistDialog2/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603645579424" />
+    <state x="-3518" y="-638" key="DiffContextDialog" timestamp="1603645431177">
+      <screen x="-3840" y="-801" width="2194" height="1194" />
+    </state>
+    <state x="-3518" y="-638" key="DiffContextDialog/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603645431177" />
     <state x="-2812" y="-492" key="FileChooserDialogImpl" timestamp="1603360458259">
       <screen x="-3840" y="-801" width="2194" height="1194" />
     </state>
     <state x="-2812" y="-492" key="FileChooserDialogImpl/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603360458259" />
-    <state width="2151" height="326" key="GridCell.Tab.0.bottom" timestamp="1603644849822">
+    <state width="2151" height="326" key="GridCell.Tab.0.bottom" timestamp="1603732488962">
       <screen x="-3840" y="-801" width="2194" height="1194" />
     </state>
-    <state width="2151" height="326" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603644849822" />
-    <state width="2151" height="326" key="GridCell.Tab.0.center" timestamp="1603644849822">
+    <state width="2151" height="326" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603732488962" />
+    <state width="2151" height="326" key="GridCell.Tab.0.center" timestamp="1603732488962">
       <screen x="-3840" y="-801" width="2194" height="1194" />
     </state>
-    <state width="2151" height="326" key="GridCell.Tab.0.center/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603644849822" />
-    <state width="2151" height="326" key="GridCell.Tab.0.left" timestamp="1603644849822">
+    <state width="2151" height="326" key="GridCell.Tab.0.center/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603732488962" />
+    <state width="2151" height="326" key="GridCell.Tab.0.left" timestamp="1603732488962">
       <screen x="-3840" y="-801" width="2194" height="1194" />
     </state>
-    <state width="2151" height="326" key="GridCell.Tab.0.left/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603644849822" />
-    <state width="2151" height="326" key="GridCell.Tab.0.right" timestamp="1603644849822">
+    <state width="2151" height="326" key="GridCell.Tab.0.left/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603732488962" />
+    <state width="2151" height="326" key="GridCell.Tab.0.right" timestamp="1603732488962">
       <screen x="-3840" y="-801" width="2194" height="1194" />
     </state>
-    <state width="2151" height="326" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603644849822" />
-    <state x="-3394" y="-511" key="SettingsEditor" timestamp="1603449318521">
+    <state width="2151" height="326" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603732488962" />
+    <state x="-3394" y="-511" key="SettingsEditor" timestamp="1603731714402">
       <screen x="-3840" y="-801" width="2194" height="1194" />
     </state>
-    <state x="-3394" y="-511" key="SettingsEditor/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603449318521" />
+    <state x="-3394" y="-511" key="SettingsEditor/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603731714402" />
+    <state x="-3150" y="-475" key="Vcs.Push.Dialog.v2" timestamp="1603645585963">
+      <screen x="-3840" y="-801" width="2194" height="1194" />
+    </state>
+    <state x="-3150" y="-475" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-3840.-801.2194.1194@-3840.-801.2194.1194" timestamp="1603645585963" />
     <state x="-3039" y="-630" width="591" height="852" key="find.popup" timestamp="1603643968516">
       <screen x="-3840" y="-801" width="2194" height="1194" />
     </state>
