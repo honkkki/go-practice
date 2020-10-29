@@ -27,6 +27,7 @@ func main() {
 	fmt.Printf("%p %p \n", s3, s4)
 	s4[0] = 2
 	fmt.Println(s4)
+
 	// 切片删除元素
 	s5 := []int{1, 2, 3, 4, 5}
 	s5 = append(s5[:1], s5[2:]...)
@@ -38,4 +39,6 @@ func main() {
 	arr2 := [...]int{1, 3, 2, 9, 6}
 	sort.Ints(arr2[:])
 	fmt.Println(arr2)
+	fmt.Printf("%T \n", arr2)
+
 }

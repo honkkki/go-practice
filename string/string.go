@@ -11,7 +11,6 @@ func test()  {
 	var bytes byte
 	fmt.Println(name)
 	fmt.Println(bytes)
-	fmt.Println("a\na")
 }
 
 func main()  {
