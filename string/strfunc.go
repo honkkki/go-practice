@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 	"strings"
 )
 
@@ -29,6 +30,11 @@ func main()  {
 	// 一个中文在utf8下占三个字节 利用索引取值需要考虑字节长度
 	s1 := "哈哈啦"
 	fmt.Println(strings.Index(s1, "啦"))		// 6
+
+	// 整型转为字符串
+	i := 1
+	intToStr := strconv.Itoa(i)
+	fmt.Println(intToStr)
 }
 
 

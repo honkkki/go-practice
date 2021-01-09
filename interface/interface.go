@@ -4,6 +4,10 @@ import (
 	"fmt"
 )
 
+type Sayer interface {
+	say()
+}
+
 type Dog struct {
 
 }
@@ -26,10 +30,6 @@ type Bird struct {
 
 func (b Bird) say()  {
 	fmt.Println("吱吱吱")
-}
-
-type Sayer interface {
-	say()
 }
 
 func do(arg Sayer)  {

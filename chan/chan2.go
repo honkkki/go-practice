@@ -11,7 +11,7 @@ func f1(ch1 chan<- int) {
 	close(ch1)
 }
 
-// 往ch1取值并往ch2中塞值
+// 从ch1取值并往ch2中塞值
 func f2(ch1 <-chan int, ch2 chan<- int) {
 	for num := range ch1 {
 		ch2 <- num * num
