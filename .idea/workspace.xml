@@ -20,7 +20,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" url="file://C:/Go" />
+  <component name="GOROOT" url="file://$PROJECT_DIR$/../../../Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -52,22 +52,22 @@
       <recent name="D:\go\src\go-practice\string" />
     </key>
   </component>
-  <component name="RunManager" selected="Go 构建.go build go-practice/time (1)">
-    <configuration name="go build go-practice/map" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go 构建.go build go-practice/net">
+    <configuration name="go build go-practice/net" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-practice" />
       <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/map/map.go" />
-      <package value="go-practice/map" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/net/net.go" />
+      <package value="go-practice/net" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go-practice/string" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go-practice/os" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-practice" />
       <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/string/char.go" />
-      <package value="go-practice/string" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/os/os.go" />
+      <package value="go-practice/os" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
@@ -99,25 +99,36 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go 构建.go build go-practice/string" />
-      <item itemvalue="Go 构建.go build go-practice/map" />
       <item itemvalue="Go 构建.go build go-practice/type" />
       <item itemvalue="Go 构建.go build go-practice/time" />
       <item itemvalue="Go 构建.go build go-practice/time (1)" />
+      <item itemvalue="Go 构建.go build go-practice/os" />
+      <item itemvalue="Go 构建.go build go-practice/net" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go 构建.go build go-practice/net" />
+        <item itemvalue="Go 构建.go build go-practice/os" />
         <item itemvalue="Go 构建.go build go-practice/time (1)" />
         <item itemvalue="Go 构建.go build go-practice/time" />
         <item itemvalue="Go 构建.go build go-practice/type" />
-        <item itemvalue="Go 构建.go build go-practice/string" />
-        <item itemvalue="Go 构建.go build go-practice/map" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
