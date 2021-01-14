@@ -5,6 +5,7 @@ import (
 	"sync"
 )
 
+// 同步锁 等待执行完成
 var wg1 sync.WaitGroup
 
 func main() {

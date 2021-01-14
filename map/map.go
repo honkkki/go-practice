@@ -3,8 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	map1 := make(map[string]string, 5)
+	map1 := make(map[string]string)
 	map1["name"] = "jisoo"
+	map1["a"] = "jisoo"
+	map1["s"] = "jisoo"
+	map1["d"] = "jisoo"
+	map1["c"] = "jisoo"
+	map1["x"] = "jisoo"
+	map1["z"] = "jisoo"
 	fmt.Println(map1)
 	fmt.Printf("%#v \n", map1)
 

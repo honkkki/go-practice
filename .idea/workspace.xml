@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="234aab81-1b0e-4cf4-9854-f5130038c6f7" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chan/chan3.go" beforeDir="false" afterPath="$PROJECT_DIR$/chan/chan3.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chan/chan5.go" beforeDir="false" afterPath="$PROJECT_DIR$/chan/chan5.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/func/func.go" beforeDir="false" afterPath="$PROJECT_DIR$/func/func.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goroutine/go2.go" beforeDir="false" afterPath="$PROJECT_DIR$/goroutine/go2.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/map.go" beforeDir="false" afterPath="$PROJECT_DIR$/map/map.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/string/char.go" beforeDir="false" afterPath="$PROJECT_DIR$/string/char.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/string/strfunc.go" beforeDir="false" afterPath="$PROJECT_DIR$/string/strfunc.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/struct/struct3.go" beforeDir="false" afterPath="$PROJECT_DIR$/struct/struct3.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,16 +26,9 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="C:\Go" />
+  <component name="GOROOT" url="file://C:/Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GoLibraries">
-    <option name="urls">
-      <list>
-        <option value="file://$PROJECT_DIR$/.." />
-      </list>
-    </option>
   </component>
   <component name="ProjectId" id="1jEBBjxqKbu4USE4QluhxH0zkwZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -50,67 +50,74 @@
     <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../go-mod" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gingin" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.deploy.options" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\go\src\go-practice\string" />
     </key>
   </component>
-  <component name="RunManager" selected="Go 构建.go build go-practice/chan (3)">
-    <configuration name="go build defer.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go 构建.go build go-practice/time (1)">
+    <configuration name="go build go-practice/map" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-practice" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/defer/defer.go" />
-      <package value="go-practice" />
+      <filePath value="$PROJECT_DIR$/map/map.go" />
+      <package value="go-practice/map" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go-practice/chan (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go-practice/string" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-practice" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/chan/chan3.go" />
-      <package value="go-practice/chan" />
+      <filePath value="$PROJECT_DIR$/string/char.go" />
+      <package value="go-practice/string" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go-practice/chan (2)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go-practice/time (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-practice" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/chan/chan6.go" />
-      <package value="go-practice/chan" />
+      <filePath value="$PROJECT_DIR$/time/task.go" />
+      <package value="go-practice/time" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go-practice/chan (3)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go-practice/time" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-practice" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/chan/chan5.go" />
-      <package value="go-practice/chan" />
+      <filePath value="$PROJECT_DIR$/time/time.go" />
+      <package value="go-practice/time" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go-practice/chan" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go-practice/type" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-practice" />
       <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/chan/chan.go" />
-      <package value="go-practice/chan" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/type/type.go" />
+      <package value="go-practice/type" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Go 构建.go build go-practice/string" />
+      <item itemvalue="Go 构建.go build go-practice/map" />
+      <item itemvalue="Go 构建.go build go-practice/type" />
+      <item itemvalue="Go 构建.go build go-practice/time" />
+      <item itemvalue="Go 构建.go build go-practice/time (1)" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go 构建.go build go-practice/chan (3)" />
-        <item itemvalue="Go 构建.go build go-practice/chan (2)" />
-        <item itemvalue="Go 构建.go build go-practice/chan (1)" />
-        <item itemvalue="Go 构建.go build go-practice/chan" />
-        <item itemvalue="Go 构建.go build defer.go" />
+        <item itemvalue="Go 构建.go build go-practice/time (1)" />
+        <item itemvalue="Go 构建.go build go-practice/time" />
+        <item itemvalue="Go 构建.go build go-practice/type" />
+        <item itemvalue="Go 构建.go build go-practice/string" />
+        <item itemvalue="Go 构建.go build go-practice/map" />
       </list>
     </recent_temporary>
   </component>

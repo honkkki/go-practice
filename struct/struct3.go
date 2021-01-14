@@ -21,7 +21,7 @@ func (d *Dog) wang()  {
 }
 
 func main()  {
-	d := &Dog{
+	d := Dog{
 		Feet:   4,
 		Animal: &Animal{
 			Name: "dog",
@@ -30,5 +30,6 @@ func main()  {
 
 	d.move()
 	d.wang()
+	fmt.Println(d.Name)
 }
 

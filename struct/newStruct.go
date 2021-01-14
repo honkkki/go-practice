@@ -17,5 +17,7 @@ func newSinger(name string, age int) *Singer {
 
 func main()  {
 	singer := newSinger("jisoo", 20)
-	fmt.Printf("%#v", singer)
+	fmt.Printf("%#v \n", singer)
+	fmt.Println(singer.name)
+
 }

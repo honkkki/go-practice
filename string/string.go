@@ -19,6 +19,9 @@ func main()  {
 	var age int
 	var num float32
 	fmt.Println(age, num, name)
+	a := 1
+	fmt.Println(fmt.Sprintf("%v", a))
+
 }
 
 
