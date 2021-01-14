@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="234aab81-1b0e-4cf4-9854-f5130038c6f7" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/func/func.go" beforeDir="false" afterPath="$PROJECT_DIR$/func/func.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/goroutine/go2.go" beforeDir="false" afterPath="$PROJECT_DIR$/goroutine/go2.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map/map.go" beforeDir="false" afterPath="$PROJECT_DIR$/map/map.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/string/char.go" beforeDir="false" afterPath="$PROJECT_DIR$/string/char.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/string/strfunc.go" beforeDir="false" afterPath="$PROJECT_DIR$/string/strfunc.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/struct/struct3.go" beforeDir="false" afterPath="$PROJECT_DIR$/struct/struct3.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
