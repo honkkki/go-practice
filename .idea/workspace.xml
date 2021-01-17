@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="234aab81-1b0e-4cf4-9854-f5130038c6f7" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/defer/defer.go" beforeDir="false" afterPath="$PROJECT_DIR$/defer/defer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/time/time.go" beforeDir="false" afterPath="$PROJECT_DIR$/time/time.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +22,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" url="file://$PROJECT_DIR$/../../../Go" />
+  <component name="GOROOT" url="file://C:/Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -52,7 +54,25 @@
       <recent name="D:\go\src\go-practice\string" />
     </key>
   </component>
-  <component name="RunManager" selected="Go 构建.go build go-practice/net">
+  <component name="RunManager" selected="Go 构建.go build go-practice/defer">
+    <configuration name="go build defer.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go-practice" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/defer/defer.go" />
+      <package value="go-practice" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build go-practice/defer" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go-practice" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/defer/defer2.go" />
+      <package value="go-practice/defer" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build go-practice/net" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-practice" />
       <working_directory value="$PROJECT_DIR$" />
@@ -71,15 +91,6 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go-practice/time (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go-practice" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/time/task.go" />
-      <package value="go-practice/time" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
     <configuration name="go build go-practice/time" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-practice" />
       <working_directory value="$PROJECT_DIR$" />
@@ -89,29 +100,20 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go-practice/type" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go-practice" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/type/type.go" />
-      <package value="go-practice/type" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Go 构建.go build go-practice/type" />
       <item itemvalue="Go 构建.go build go-practice/time" />
-      <item itemvalue="Go 构建.go build go-practice/time (1)" />
       <item itemvalue="Go 构建.go build go-practice/os" />
       <item itemvalue="Go 构建.go build go-practice/net" />
+      <item itemvalue="Go 构建.go build defer.go" />
+      <item itemvalue="Go 构建.go build go-practice/defer" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go 构建.go build go-practice/defer" />
+        <item itemvalue="Go 构建.go build defer.go" />
+        <item itemvalue="Go 构建.go build go-practice/time" />
         <item itemvalue="Go 构建.go build go-practice/net" />
         <item itemvalue="Go 构建.go build go-practice/os" />
-        <item itemvalue="Go 构建.go build go-practice/time (1)" />
-        <item itemvalue="Go 构建.go build go-practice/time" />
-        <item itemvalue="Go 构建.go build go-practice/type" />
       </list>
     </recent_temporary>
   </component>
@@ -129,6 +131,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />

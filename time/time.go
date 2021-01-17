@@ -17,8 +17,7 @@ func main()  {
 
 	// 格式化输出
 	fmt.Printf("%02d-%02d-%02d \n", year, month, day)
-
-	time := time.Unix(now.Unix(), 0)
-	fmt.Println(time.Year(), time.Month())
+	nowTime := time.Unix(now.Unix(), 0)
+	fmt.Println(nowTime.Year(), nowTime.Month())
 
 }

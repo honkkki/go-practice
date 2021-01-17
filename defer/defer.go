@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+// 给返回值赋值(return后的返回值) -> defer -> return
+
 func f1() int {
 	x := 5
 	defer func() {
