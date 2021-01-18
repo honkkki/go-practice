@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// 摸牌排序的过程
 func insertSort(arr []int) []int {
 	for i := 1; i < len(arr); i++ {
 		for j := i; j > 0; j-- {
