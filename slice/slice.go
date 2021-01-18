@@ -11,14 +11,19 @@ func main() {
 	slice1 := arr[:3]
 	slice2 := slice1[1:3]
 	fmt.Println(cap(slice1), cap(slice2)) // 5 4
+	fmt.Println(slice1)
+	fmt.Println(slice2)
+	fmt.Println("------------------------------")
 
 	// 切片扩容
 	var s []int                      // 未初始化
 	var s2 = []int{}                 // 已初始化
+	fmt.Println(s2)
 	fmt.Println(s == nil, s2 == nil) // true false 容量都为0 需要扩容
 	s3 := []int{1, 2, 3}
 	s = append(s, s3...)
 	fmt.Println(s) // [1 2 3]
+	fmt.Println("------------------------------")
 
 	// 切片copy
 	s4 := make([]int, 3)
