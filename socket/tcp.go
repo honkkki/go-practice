@@ -26,7 +26,7 @@ func process(conn net.Conn) {
 }
 
 func main() {
-	listen, err := net.Listen("tcp", "127.0.0.1:6380")
+	listen, err := net.Listen("tcp", "127.0.0.1:6333")
 	if err != nil {
 		fmt.Printf("start tcp failed: %v \n", err)
 		return
