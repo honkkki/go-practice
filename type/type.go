@@ -14,4 +14,7 @@ func main()  {
 
 	var num2 NewInt
 	fmt.Printf("%T \n", num2)
+
+	//main.MyInt
+	//int
 }

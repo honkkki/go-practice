@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main()  {
 	sli := make([]string, 0, 10)
@@ -8,5 +10,6 @@ func main()  {
 	sli = append(sli, "hello")
 	sli = append(sli, "hello")
 	fmt.Println(sli, len(sli), cap(sli))
+
 
 }
