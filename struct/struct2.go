@@ -5,19 +5,19 @@ import "fmt"
 // 嵌套结构体
 type Address struct {
 	Province string
-	City string
+	City     string
 }
 
 type Human struct {
 	Name string
-	Age int
+	Age  int
 	*Address
 }
 
-func main()  {
+func main() {
 	human := Human{
-		Name:    "jisoo",
-		Age:     20,
+		Name: "jisoo",
+		Age:  20,
 		Address: &Address{
 			"gd",
 			"sz",
@@ -25,6 +25,7 @@ func main()  {
 	}
 
 	fmt.Printf("%#v \n", human)
+	fmt.Printf("address : %#v \n", human.Address)
 	fmt.Println(human.Province)
 
 }

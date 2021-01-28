@@ -1,8 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-func main()  {
+func main() {
 	var m map[string]int
 
 	fmt.Println(m)
@@ -13,6 +15,6 @@ func main()  {
 	m["num"] = 1
 	fmt.Println(m)
 
-
+	fmt.Println("-----------------")
 
 }
