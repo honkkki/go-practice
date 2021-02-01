@@ -20,4 +20,5 @@ func main() {
 
 	err := errors.New("foo")
 	fmt.Printf("%T %v \n", err, err)
+	fmt.Println(err.Error())
 }
