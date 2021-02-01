@@ -23,4 +23,5 @@ func main() {
 
 	a := new(int)
 	fmt.Println(a) // 0xc00006e0e8
+	fmt.Printf("%T", a)
 }

@@ -7,8 +7,8 @@ import (
 
 // json序列化示例
 type Student struct {
-	ID   int
-	Name string
+	ID   int `json:"id"`
+	Name string	`json:"name"`
 }
 
 type Class struct {
