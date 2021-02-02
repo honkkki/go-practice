@@ -7,8 +7,8 @@ import (
 
 // json序列化示例
 type Student struct {
-	ID   int
-	Name string
+	ID   int    `json:"id"`
+	Name string `json:"name"`
 }
 
 type Class struct {
@@ -44,6 +44,9 @@ func main() {
 	fmt.Printf("json序列化后: %v \n", string(data))
 
 	var c2 Class
+	fmt.Println("------")
+	fmt.Println(c2)
+
 	err = json.Unmarshal(data, &c2)
 
 	if err != nil {

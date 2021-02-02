@@ -7,17 +7,20 @@ import (
 )
 
 // 获取终端输入
-func main()  {
+func main() {
 	var s string
 	fmt.Println(os.Args)
 
-	for i:=1;i<len(os.Args);i++ {
+	for i := 1; i < len(os.Args); i++ {
 		s = s + os.Args[i] + " "
 	}
 
 	s2 := strings.Join(os.Args[1:], " ")
 
-
 	fmt.Println(s)
 	fmt.Println(s2)
+
+	slice1 := strings.Split(s2, " ")
+	fmt.Println(slice1)
+
 }
