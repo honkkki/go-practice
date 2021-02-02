@@ -11,7 +11,9 @@ func main() {
 	ch1 <- 10
 	ch1 <- 2
 	x := <-ch1
+	fmt.Println(111)
 	y := <-ch1
+
 	fmt.Println(x)
 	fmt.Println(y)
 }

@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 func go1(ch chan int) {
-	<-ch
 	fmt.Println("go")
+	<-ch
 }
 
 func main() {
