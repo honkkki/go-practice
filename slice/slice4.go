@@ -2,9 +2,9 @@ package main
 
 import "fmt"
 
-func main()  {
+func main() {
 	// 切片是对底层数组的引用
-	arr := [5]int{1,2,3,4,5}
+	arr := [5]int{1, 2, 3, 4, 5}
 	s := arr[:]
 	arr[0] = 100
 
@@ -15,6 +15,7 @@ func main()  {
 	fmt.Println(s)
 	fmt.Println(arr)
 
-
+	s1 := []int{1, 2, 3}
+	fmt.Println(&s1[0])
 
 }
