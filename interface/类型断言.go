@@ -17,7 +17,7 @@ func main() {
 	itf = 1
 	v := itf.(int)
 	fmt.Println(v)
-	fmt.Printf("%T\n", v)
+	fmt.Printf("%T\n", v) // int
 
 	fmt.Println("----------------------------------")
 	// switch判断接口类型

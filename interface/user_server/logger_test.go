@@ -6,8 +6,14 @@ import (
 	"testing"
 )
 
-func TestLogger(t *testing.T) {
+func TestFileLogger(t *testing.T) {
 	fmt.Println("test function")
-	l := logger.NewFileLogger("../log_file", "test")
-	l.Info("hello golang")
+	log := logger.NewFileLogger("../log_file", "test")
+	defer log.Close()
+	log.Debug("log debug")
+	log.Info("log info")
+	log.Error("log error")
+	log.Info([]string{
+		"hello", "golang",
+	})
 }
