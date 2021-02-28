@@ -14,7 +14,9 @@ func main() {
 	}
 	defer file.Close()
 
-	//file.WriteString("hello gogogo")
+	//file.WriteString("hello gogogo\n")
+
+	// ioutil读写文件
 	content, _ := ioutil.ReadFile("./test.txt")
 	ioutil.WriteFile("./test3.txt", content, 0777)
 

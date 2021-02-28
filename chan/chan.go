@@ -2,7 +2,6 @@ package main
 
 import "fmt"
 
-
 func main() {
 	var ch1 = make(chan int, 5)
 	fmt.Println(ch1)
@@ -14,4 +13,12 @@ func main() {
 	y := <-ch1
 	fmt.Println(x)
 	fmt.Println(y)
+
+	ch1 <- 1
+	ch1 <- 1
+	ch1 <- 1
+	ch1 <- 1
+	close(ch1)
+	c := <-ch1
+	fmt.Println(c)
 }

@@ -5,7 +5,7 @@ import (
 	"runtime"
 )
 
-func main()  {
+func main() {
 	// 空接口
 	var x interface{}
 	x = 1
@@ -26,6 +26,5 @@ func main()  {
 	fmt.Println(slice)
 
 	fmt.Println(runtime.NumCPU())
-
 
 }

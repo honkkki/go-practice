@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 )
 
-// ioutil
+// ioutil读取文件
 
 func main() {
 	content, err := ioutil.ReadFile("./file.txt")
