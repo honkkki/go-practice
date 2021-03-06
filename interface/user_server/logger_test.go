@@ -7,7 +7,7 @@ import (
 )
 
 func TestFileLogger(t *testing.T) {
-	fmt.Println("test function")
+	fmt.Println("test file logger")
 	log := logger.NewFileLogger("../log_file", "test")
 	defer log.Close()
 	log.Debug("log debug")
@@ -16,4 +16,9 @@ func TestFileLogger(t *testing.T) {
 	log.Info([]string{
 		"hello", "golang",
 	})
+}
+
+func TestConsoleLogger(t *testing.T) {
+	log := logger.NewConsoleLogger()
+	log.Debug("log console debug")
 }

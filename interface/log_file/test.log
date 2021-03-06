@@ -1,20 +1,8 @@
-hello golang
-hello golang
-hello golang
-hello golang
-[DEBUG] 2021-03-04 21:26:46 logger_test.go:13 user_server.TestFileLogger log debug
-[INFO] 2021-03-04 21:26:46 logger_test.go:14 user_server.TestFileLogger log info
-[ERROR] 2021-03-04 21:26:46 logger_test.go:15 user_server.TestFileLogger log error
-[INFO] 2021-03-04 21:26:46 logger_test.go:16 user_server.TestFileLogger [hello golang]
-[DEBUG] 2021-03-04 21:27:19 logger_test.go:13 user_server.TestFileLogger log debug
-[INFO] 2021-03-04 21:27:19 logger_test.go:14 user_server.TestFileLogger log info
-[ERROR] 2021-03-04 21:27:19 logger_test.go:15 user_server.TestFileLogger log error
-[INFO] 2021-03-04 21:27:19 logger_test.go:16 user_server.TestFileLogger [hello golang]
-[DEBUG] 2021-03-04 21:33:24 logger_test.go:13 user_server.TestFileLogger log debug
-[INFO] 2021-03-04 21:33:24 logger_test.go:14 user_server.TestFileLogger log info
-[ERROR] 2021-03-04 21:33:24 logger_test.go:15 user_server.TestFileLogger log error
-[INFO] 2021-03-04 21:33:24 logger_test.go:16 user_server.TestFileLogger [hello golang]
-[DEBUG] 2021-03-06 21:05:24 logger_test.go:13 user_server.TestFileLogger log debug
-[INFO] 2021-03-06 21:05:24 logger_test.go:14 user_server.TestFileLogger log info
-[ERROR] 2021-03-06 21:05:24 logger_test.go:15 user_server.TestFileLogger log error
-[INFO] 2021-03-06 21:05:24 logger_test.go:16 user_server.TestFileLogger [hello golang]
+[DEBUG] 2021-03-07 00:02:00 logger_test.go:14 user_server.TestFileLogger log debug
+[INFO] 2021-03-07 00:02:00 logger_test.go:15 user_server.TestFileLogger log info
+[ERROR] 2021-03-07 00:02:00 logger_test.go:16 user_server.TestFileLogger log error
+[INFO] 2021-03-07 00:02:00 logger_test.go:17 user_server.TestFileLogger [hello golang]
+[DEBUG] 2021-03-07 00:15:25 logger_test.go:13 user_server.TestFileLogger log debug
+[INFO] 2021-03-07 00:15:25 logger_test.go:14 user_server.TestFileLogger log info
+[ERROR] 2021-03-07 00:15:25 logger_test.go:15 user_server.TestFileLogger log error
+[INFO] 2021-03-07 00:15:25 logger_test.go:16 user_server.TestFileLogger [hello golang]
