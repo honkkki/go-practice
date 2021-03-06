@@ -1,39 +1,20 @@
-[DEBUG]2021-02-28 20:42:01 log debug
-[INFO] 2021-02-28 20:42:01 log info
-[ERROR] 2021-02-28 20:42:01 log error
-[DEBUG]2021-02-28 20:46:04 log debug
-[INFO] 2021-02-28 20:46:04 log info
-[ERROR] 2021-02-28 20:46:04 log error
-[INFO] 2021-02-28 20:46:04 [hello golang]
-[DEBUG] 2021-02-28 23:16:47 /mnt/d/go/src/go-practice/interface/logger/util.go:6 go-practice/interface/logger.GetLineInfo log debug
-[INFO] 2021-02-28 23:16:47 /mnt/d/go/src/go-practice/interface/logger/util.go:6 go-practice/interface/logger.GetLineInfo log info
-[ERROR] 2021-02-28 23:16:47 /mnt/d/go/src/go-practice/interface/logger/util.go:6 go-practice/interface/logger.GetLineInfo log error
-[INFO] 2021-02-28 23:16:47 /mnt/d/go/src/go-practice/interface/logger/util.go:6 go-practice/interface/logger.GetLineInfo [hello golang]
-[DEBUG] 2021-02-28 23:19:05 util.go:6 go-practice/interface/logger.GetLineInfo log debug
-[INFO] 2021-02-28 23:19:05 util.go:6 go-practice/interface/logger.GetLineInfo log info
-[ERROR] 2021-02-28 23:19:05 util.go:6 go-practice/interface/logger.GetLineInfo log error
-[INFO] 2021-02-28 23:19:05 util.go:6 go-practice/interface/logger.GetLineInfo [hello golang]
-[DEBUG] 2021-02-28 23:19:52 util.go:6 logger.GetLineInfo log debug
-[INFO] 2021-02-28 23:19:52 util.go:6 logger.GetLineInfo log info
-[ERROR] 2021-02-28 23:19:52 util.go:6 logger.GetLineInfo log error
-[INFO] 2021-02-28 23:19:52 util.go:6 logger.GetLineInfo [hello golang]
-[DEBUG] 2021-02-28 23:22:14 file.go:54 logger.(*FileLogger).LogPrefix log debug
-[INFO] 2021-02-28 23:22:14 file.go:54 logger.(*FileLogger).LogPrefix log info
-[ERROR] 2021-02-28 23:22:14 file.go:54 logger.(*FileLogger).LogPrefix log error
-[INFO] 2021-02-28 23:22:14 file.go:54 logger.(*FileLogger).LogPrefix [hello golang]
-[DEBUG] 2021-02-28 23:22:58 logger_test.go:13 user_server.TestLogger log debug
-[INFO] 2021-02-28 23:22:58 logger_test.go:14 user_server.TestLogger log info
-[ERROR] 2021-02-28 23:22:58 logger_test.go:15 user_server.TestLogger log error
-[INFO] 2021-02-28 23:22:58 logger_test.go:16 user_server.TestLogger [hello golang]
-[DEBUG] 2021-02-28 23:37:07 logger_test.go:13 user_server.TestLogger log debug
-[INFO] 2021-02-28 23:37:07 logger_test.go:14 user_server.TestLogger log info
-[ERROR] 2021-02-28 23:37:07 logger_test.go:15 user_server.TestLogger log error
-[INFO] 2021-02-28 23:37:07 logger_test.go:16 user_server.TestLogger [hello golang]
-[DEBUG] 2021-02-28 23:48:05 logger_test.go:13 user_server.TestFileLogger log debug
-[INFO] 2021-02-28 23:48:05 logger_test.go:14 user_server.TestFileLogger log info
-[ERROR] 2021-02-28 23:48:05 logger_test.go:15 user_server.TestFileLogger log error
-[INFO] 2021-02-28 23:48:05 logger_test.go:16 user_server.TestFileLogger [hello golang]
-[DEBUG] 2021-03-02 23:27:42 logger_test.go:13 user_server.TestFileLogger log debug
-[INFO] 2021-03-02 23:27:42 logger_test.go:14 user_server.TestFileLogger log info
-[ERROR] 2021-03-02 23:27:42 logger_test.go:15 user_server.TestFileLogger log error
-[INFO] 2021-03-02 23:27:42 logger_test.go:16 user_server.TestFileLogger [hello golang]
+hello golang
+hello golang
+hello golang
+hello golang
+[DEBUG] 2021-03-04 21:26:46 logger_test.go:13 user_server.TestFileLogger log debug
+[INFO] 2021-03-04 21:26:46 logger_test.go:14 user_server.TestFileLogger log info
+[ERROR] 2021-03-04 21:26:46 logger_test.go:15 user_server.TestFileLogger log error
+[INFO] 2021-03-04 21:26:46 logger_test.go:16 user_server.TestFileLogger [hello golang]
+[DEBUG] 2021-03-04 21:27:19 logger_test.go:13 user_server.TestFileLogger log debug
+[INFO] 2021-03-04 21:27:19 logger_test.go:14 user_server.TestFileLogger log info
+[ERROR] 2021-03-04 21:27:19 logger_test.go:15 user_server.TestFileLogger log error
+[INFO] 2021-03-04 21:27:19 logger_test.go:16 user_server.TestFileLogger [hello golang]
+[DEBUG] 2021-03-04 21:33:24 logger_test.go:13 user_server.TestFileLogger log debug
+[INFO] 2021-03-04 21:33:24 logger_test.go:14 user_server.TestFileLogger log info
+[ERROR] 2021-03-04 21:33:24 logger_test.go:15 user_server.TestFileLogger log error
+[INFO] 2021-03-04 21:33:24 logger_test.go:16 user_server.TestFileLogger [hello golang]
+[DEBUG] 2021-03-06 21:05:24 logger_test.go:13 user_server.TestFileLogger log debug
+[INFO] 2021-03-06 21:05:24 logger_test.go:14 user_server.TestFileLogger log info
+[ERROR] 2021-03-06 21:05:24 logger_test.go:15 user_server.TestFileLogger log error
+[INFO] 2021-03-06 21:05:24 logger_test.go:16 user_server.TestFileLogger [hello golang]
