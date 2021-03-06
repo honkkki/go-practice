@@ -15,9 +15,10 @@ const (
 	e = 1 << iota // 1
 	f             // 2
 	g             // 4
+	x
 )
 
 func main() {
 	fmt.Println(a, b, c, d, w, q)
-	fmt.Println(e, f, g)
+	fmt.Println(e, f, g, x)
 }
