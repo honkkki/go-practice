@@ -18,3 +18,7 @@ hello golang
 [INFO] 2021-03-06 21:05:24 logger_test.go:14 user_server.TestFileLogger log info
 [ERROR] 2021-03-06 21:05:24 logger_test.go:15 user_server.TestFileLogger log error
 [INFO] 2021-03-06 21:05:24 logger_test.go:16 user_server.TestFileLogger [hello golang]
+[DEBUG] 2021-03-08 00:48:19 logger_test.go:13 command-line-arguments.TestFileLogger log debug
+[INFO] 2021-03-08 00:48:19 logger_test.go:14 command-line-arguments.TestFileLogger log info
+[ERROR] 2021-03-08 00:48:19 logger_test.go:15 command-line-arguments.TestFileLogger log error
+[INFO] 2021-03-08 00:48:19 logger_test.go:16 command-line-arguments.TestFileLogger [hello golang]
