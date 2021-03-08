@@ -6,3 +6,20 @@
 [INFO] 2021-03-07 00:15:25 logger_test.go:14 user_server.TestFileLogger log info
 [ERROR] 2021-03-07 00:15:25 logger_test.go:15 user_server.TestFileLogger log error
 [INFO] 2021-03-07 00:15:25 logger_test.go:16 user_server.TestFileLogger [hello golang]
+[DEBUG] 2021-03-08 16:06:15 logger_test.go:13 command-line-arguments.TestFileLogger log debug
+[INFO] 2021-03-08 16:06:15 logger_test.go:14 command-line-arguments.TestFileLogger log info
+[ERROR] 2021-03-08 16:06:15 logger_test.go:15 command-line-arguments.TestFileLogger log error
+[INFO] 2021-03-08 16:06:15 logger_test.go:16 command-line-arguments.TestFileLogger [hello golang]
+[DEBUG] 2021-03-08 16:08:11 logger_test.go:13 user_server.TestFileLogger log debug
+[INFO] 2021-03-08 16:08:11 logger_test.go:14 user_server.TestFileLogger log info
+[ERROR] 2021-03-08 16:08:11 logger_test.go:15 user_server.TestFileLogger log error
+[INFO] 2021-03-08 16:08:11 logger_test.go:16 user_server.TestFileLogger [hello golang]
+[DEBUG] 2021-03-08 16:34:05 logger.go:22 logger.Debug new debug
+[DEBUG] 2021-03-08 16:38:34 logger.go:22 logger.Debug new debug
+
+
+
+
+
+[DEBUG] 2021-03-08 16:38:40 logger.go:22 logger.Debug new debug
+[DEBUG] 2021-03-08 16:40:25 main.go:9 main.main new debug
