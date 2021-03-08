@@ -24,8 +24,6 @@ func makeSuffixClosure(name string) func(suffix string) string {
 	}
 }
 
-
-
 func main() {
 	res := makeSuffix("test", ".txt")
 	fmt.Println(res)
@@ -33,5 +31,4 @@ func main() {
 	closureFunc := makeSuffixClosure("test")
 	ret := closureFunc(".txt")
 	fmt.Println(ret)
-
 }

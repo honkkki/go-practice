@@ -1,0 +1,8 @@
+[DEBUG] 2021-03-07 00:02:00 logger_test.go:14 user_server.TestFileLogger log debug
+[INFO] 2021-03-07 00:02:00 logger_test.go:15 user_server.TestFileLogger log info
+[ERROR] 2021-03-07 00:02:00 logger_test.go:16 user_server.TestFileLogger log error
+[INFO] 2021-03-07 00:02:00 logger_test.go:17 user_server.TestFileLogger [hello golang]
+[DEBUG] 2021-03-07 00:15:25 logger_test.go:13 user_server.TestFileLogger log debug
+[INFO] 2021-03-07 00:15:25 logger_test.go:14 user_server.TestFileLogger log info
+[ERROR] 2021-03-07 00:15:25 logger_test.go:15 user_server.TestFileLogger log error
+[INFO] 2021-03-07 00:15:25 logger_test.go:16 user_server.TestFileLogger [hello golang]

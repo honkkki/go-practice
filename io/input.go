@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// 获取命令行输入
 func main() {
 	var a int
 	var b string
