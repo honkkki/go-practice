@@ -1,6 +1,9 @@
 package logger
 
-import "os"
+import (
+	"fmt"
+	"os"
+)
 
 type ConsoleLogger struct {
 	level int
@@ -20,17 +23,26 @@ func (f *ConsoleLogger) SetLevel(level int) {
 
 func (f *ConsoleLogger) Debug(args ...interface{}) {
 	f.SetLevel(DEBUG)
-	WriteLog(os.Stdout, f.level, args...)
+	logData := WriteLog(f.level, args...)
+	fmt.Fprintf(os.Stdout, "%s %s %s:%d %s %s \n", logData.LevelStr,
+		logData.TimeStr, logData.FileName, logData.LineNo,
+		logData.FuncName, logData.Message)
 }
 
 func (f *ConsoleLogger) Info(args ...interface{}) {
 	f.SetLevel(INFO)
-	WriteLog(os.Stdout, f.level, args...)
+	logData := WriteLog(f.level, args...)
+	fmt.Fprintf(os.Stdout, "%s %s %s:%d %s %s \n", logData.LevelStr,
+		logData.TimeStr, logData.FileName, logData.LineNo,
+		logData.FuncName, logData.Message)
 }
 
 func (f *ConsoleLogger) Error(args ...interface{}) {
 	f.SetLevel(ERROR)
-	WriteLog(os.Stdout, f.level, args...)
+	logData := WriteLog(f.level, args...)
+	fmt.Fprintf(os.Stdout, "%s %s %s:%d %s %s \n", logData.LevelStr,
+		logData.TimeStr, logData.FileName, logData.LineNo,
+		logData.FuncName, logData.Message)
 }
 
 func (f *ConsoleLogger) Close() {

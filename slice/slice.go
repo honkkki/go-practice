@@ -18,11 +18,12 @@ func main() {
 	// 切片扩容
 	var s []int                      // 未初始化
 	var s2 = []int{}                 // 已初始化
-	fmt.Println(s2)
+	fmt.Println("s", s, s == nil)
+	fmt.Println("s2", s2, s2 == nil)
 	fmt.Println(s == nil, s2 == nil) // true false 容量都为0 需要扩容
 	s3 := []int{1, 2, 3}
 	s = append(s, s3...)
-	fmt.Println(s) // [1 2 3]
+	fmt.Println(s, cap(s)) // [1 2 3]  4
 	fmt.Println("------------------------------")
 
 	// 切片copy
@@ -32,6 +33,7 @@ func main() {
 	fmt.Printf("%p %p \n", s3, s4)
 	s4[0] = 2
 	fmt.Println(s4)
+	fmt.Println("------------------------------")
 
 	// 切片删除元素
 	s5 := []int{1, 2, 3, 4, 5}
