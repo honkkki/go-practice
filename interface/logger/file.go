@@ -6,19 +6,22 @@ import (
 )
 
 type FileLogger struct {
-	level    int
-	filePath string
-	fileName string
-	file     *os.File
+	level       int
+	filePath    string
+	fileName    string
+	file        *os.File
+	LogDataChan chan *LogData
 }
 
-func NewFileLogger(fp, fn string) LoggerInterface {
+func NewFileLogger(fp, fn string, logChanSize int) LoggerInterface {
 	fileLogger := &FileLogger{
-		filePath: fp,
-		fileName: fn,
+		filePath:    fp,
+		fileName:    fn,
+		LogDataChan: make(chan *LogData, logChanSize),
 	}
 
 	fileLogger.initFile()
+	go fileLogger.writeLogBg()
 	return fileLogger
 }
 
@@ -32,6 +35,13 @@ func (f *FileLogger) initFile() {
 	f.file = file
 }
 
+func (f *FileLogger) writeLogBg() {
+	for logData := range f.LogDataChan {
+		fmt.Fprintf(f.file, "%s %s %s:%d %s %s \n", logData.LevelStr,
+			logData.TimeStr, logData.FileName, logData.LineNo,
+			logData.FuncName, logData.Message)
+	}
+}
 
 func (f *FileLogger) SetLevel(level int) {
 	if level < DEBUG || level > ERROR {
@@ -42,17 +52,29 @@ func (f *FileLogger) SetLevel(level int) {
 
 func (f *FileLogger) Debug(args ...interface{}) {
 	f.SetLevel(DEBUG)
-	WriteLog(f.file, f.level, args...)
+	logData := WriteLog(f.level, args...)
+	select {
+	case f.LogDataChan <- logData:
+	default:
+	}
 }
 
 func (f *FileLogger) Info(args ...interface{}) {
 	f.SetLevel(INFO)
-	WriteLog(f.file, f.level, args...)
+	logData := WriteLog(f.level, args...)
+	select {
+	case f.LogDataChan <- logData:
+	default:
+	}
 }
 
 func (f *FileLogger) Error(args ...interface{}) {
 	f.SetLevel(ERROR)
-	WriteLog(f.file, f.level, args...)
+	logData := WriteLog(f.level, args...)
+	select {
+	case f.LogDataChan <- logData:
+	default:
+	}
 }
 
 func (f *FileLogger) Close() {

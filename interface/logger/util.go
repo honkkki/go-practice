@@ -2,11 +2,19 @@ package logger
 
 import (
 	"fmt"
-	"os"
 	"path"
 	"runtime"
 	"time"
 )
+
+type LogData struct {
+	Message  string
+	TimeStr  string
+	LevelStr string
+	FileName string
+	FuncName string
+	LineNo   int
+}
 
 func GetLineInfo() (fileName string, funcName string, lineNo int) {
 	pc, file, line, ok := runtime.Caller(4)
@@ -19,28 +27,36 @@ func GetLineInfo() (fileName string, funcName string, lineNo int) {
 	return
 }
 
-func WriteLog(f *os.File, LogLevel int, args ...interface{})  {
+func WriteLog(LogLevel int, args ...interface{}) *LogData {
 	now := time.Now()
 	nowTime := now.Format("2006-01-02 15:04:05")
+
+	levelStr := ""
 	switch LogLevel {
 	case DEBUG:
-		fmt.Fprint(f, "[DEBUG] ")
+		levelStr = "[DEBUG] "
 	case INFO:
-		fmt.Fprint(f, "[INFO] ")
+		levelStr = "[INFO] "
 	case ERROR:
-		fmt.Fprint(f, "[ERROR] ")
+		levelStr = "[ERROR] "
 	default:
-		fmt.Fprint(f, "[DEBUG] ")
+		levelStr = "[DEBUG] "
 	}
-	fmt.Fprint(f, nowTime+" ")
 
-	fileName, funcName, line := GetLineInfo()
+	nowTime = nowTime + " "
+	fileName, funcName, lineNo := GetLineInfo()
 	fileName = path.Base(fileName)
 	funcName = path.Base(funcName)
-	fmt.Fprintf(f, "%s:%d %s ", fileName, line, funcName)
+	msg := fmt.Sprint(args...)
 
-	_, err := fmt.Fprintln(f, args...)
-	if err != nil {
-		fmt.Println(err)
+	logData := &LogData{
+		Message: msg,
+		TimeStr:  nowTime,
+		LevelStr: levelStr,
+		FileName: fileName,
+		FuncName: funcName,
+		LineNo:   lineNo,
 	}
+
+	return logData
 }

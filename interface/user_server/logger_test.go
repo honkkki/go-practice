@@ -8,7 +8,7 @@ import (
 
 func TestFileLogger(t *testing.T) {
 	fmt.Println("test file logger")
-	log := logger.NewFileLogger("../log_file", "test")
+	log := logger.NewFileLogger("../log_file", "test", 1000)
 	defer log.Close()
 	log.Debug("log debug")
 	log.Info("log info")
