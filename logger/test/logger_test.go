@@ -1,9 +1,10 @@
-package user_server
+package test
 
 import (
 	"fmt"
-	"go-practice/interface/logger"
+	"go-practice/logger/logger"
 	"testing"
+	"time"
 )
 
 func TestFileLogger(t *testing.T) {
@@ -16,6 +17,9 @@ func TestFileLogger(t *testing.T) {
 	log.Info([]string{
 		"hello", "golang",
 	})
+
+	// 等待协程执行完任务
+	time.Sleep(time.Second * 3)
 }
 
 func TestConsoleLogger(t *testing.T) {

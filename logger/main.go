@@ -1,7 +1,7 @@
 package main
 
 import (
-	"go-practice/interface/logger"
+	"go-practice/logger/logger"
 	"time"
 )
 
