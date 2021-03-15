@@ -10,7 +10,6 @@ func main() {
 	ch <- 1
 
 	close(ch)
-	ch <- 1
 
 	for v := range ch {
 		fmt.Println(v)
