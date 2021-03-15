@@ -15,7 +15,7 @@ func main() {
 	for v := range ch {
 		fmt.Println(v)
 	}
-	
+
 	_, ok := <- ch
 	fmt.Println(ok)
 

@@ -17,6 +17,9 @@ func main()  {
 	// 获取变量的种类
 	fmt.Println(data.Kind())
 	fmt.Println(data)
+	fmt.Println(data.Int())
+	d := data.Int() + 1
+	fmt.Println(d)
 
 
 

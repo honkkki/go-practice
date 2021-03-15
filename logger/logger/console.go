@@ -9,7 +9,7 @@ type ConsoleLogger struct {
 	level int
 }
 
-func NewConsoleLogger() LoggerInterface {
+func NewConsoleLogger() *ConsoleLogger {
 	consoleLogger := &ConsoleLogger{}
 	return consoleLogger
 }

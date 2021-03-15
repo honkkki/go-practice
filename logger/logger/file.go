@@ -3,6 +3,7 @@ package logger
 import (
 	"fmt"
 	"os"
+	"time"
 )
 
 type FileLogger struct {
@@ -13,7 +14,7 @@ type FileLogger struct {
 	LogDataChan chan *LogData
 }
 
-func NewFileLogger(fp, fn string, logChanSize int) LoggerInterface {
+func NewFileLogger(fp, fn string, logChanSize int) *FileLogger {
 	fileLogger := &FileLogger{
 		filePath:    fp,
 		fileName:    fn,
@@ -35,8 +36,30 @@ func (f *FileLogger) initFile() {
 	f.file = file
 }
 
+// 根据日期创建日志文件
+func (f *FileLogger) checkSplitDate()  {
+	now := time.Now()
+	nowDate := fmt.Sprintf("%04d%02d%02d", now.Year(), now.Month(), now.Day())
+
+	if nowDate == f.fileName {
+		return
+	} else {
+		// 新的日期创建新的文件
+		f.file.Close()
+		fileAllName := fmt.Sprintf("%s/%s.log", f.filePath, nowDate)
+		file, err := os.OpenFile(fileAllName, os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0755)
+		if err != nil {
+			panic(fmt.Sprintf("open file %s failed, err : %s", fileAllName, err.Error()))
+		}
+
+		f.file = file
+	}
+}
+
+// 写日志goroutine
 func (f *FileLogger) writeLogBg() {
 	for logData := range f.LogDataChan {
+		f.checkSplitDate()
 		fmt.Fprintf(f.file, "%s %s %s:%d %s %s \n", logData.LevelStr,
 			logData.TimeStr, logData.FileName, logData.LineNo,
 			logData.FuncName, logData.Message)
