@@ -10,6 +10,9 @@ func main() {
 	//fmt.Println("end")
 
 	x := 1
+	defer fmt.Println(x)
+
+	// defer闭包内部引用外部的x
 	defer func() {
 		x += 1
 		fmt.Println(x)
