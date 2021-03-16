@@ -1,4 +1,5 @@
 .idea
-./logger/log_file/
+logger/log_file/*.log
+
 
 

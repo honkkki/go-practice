@@ -15,6 +15,7 @@ func ref(a interface{}) {
 	}
 
 	v := reflect.ValueOf(a)
+	fmt.Println(v)
 	fmt.Println(v.Kind())
 	b := strings.Contains(v.Kind().String(), "int")
 	fmt.Println(b)
