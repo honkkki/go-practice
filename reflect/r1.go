@@ -10,6 +10,8 @@ func ref(a interface{}) {
 	t := reflect.TypeOf(a)
 	fmt.Println(t.Name())
 
+	fmt.Println(t.Kind())
+
 	if t.Kind() == reflect.Int8 {
 		fmt.Printf("is: %v\n", t.Kind().String())
 	}
