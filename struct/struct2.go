@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // 嵌套结构体
 type Address struct {
@@ -27,5 +29,8 @@ func main() {
 	fmt.Printf("%#v \n", human)
 	fmt.Printf("address : %#v \n", human.Address)
 	fmt.Println(human.Province)
+
+	h1 := Human{}
+	fmt.Println(h1==Human{})		// 空结构体
 
 }
