@@ -19,5 +19,4 @@ func TestIniConfig(t *testing.T) {
 	}
 
 	t.Logf("success: %#v\n", conf)
-
 }

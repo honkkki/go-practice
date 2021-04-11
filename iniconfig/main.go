@@ -17,7 +17,8 @@ func main()  {
 		log.Fatal("unmarshal failed: ", err)
 	}
 
-
 	fmt.Println(conf)
+	// host
+	fmt.Println(conf.MysqlConfig.Host)
 
 }

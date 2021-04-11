@@ -14,10 +14,11 @@ type Config struct {
 }
 
 type MysqlConfig struct {
-	Host     string `ini:"host"`
-	Username string `ini:"username"`
-	Password string `ini:"password"`
-	Port     int    `ini:"port"`
+	Host     string  `ini:"host"`
+	Username string  `ini:"username"`
+	Password string  `ini:"password"`
+	Port     int     `ini:"port"`
+	Timeout  float64 `ini:"timeout"`
 }
 
 type ServerConfig struct {
@@ -73,6 +74,7 @@ func UnMarshal(data []byte, res interface{}) (err error) {
 	return
 }
 
+// parse section in ini
 func parseSection(v string, k int, resStruct reflect.Type) (fieldName string, err error) {
 	if !strings.Contains(v, "]") || len(v) <= 2 {
 		err = fmt.Errorf("error section in line %d", k+1)
@@ -122,14 +124,23 @@ func parseItem(v string, k int, sectionName string, res interface{}) (err error)
 		tagName := structField.Tag.Get("ini")
 		// 如果找到了结构体中对应的字段 反射给其赋值
 		if tagName == key {
-			fmt.Println(structField.Name)
-			fmt.Println(structField.Type.Kind())
 			switch structField.Type.Kind() {
 			case reflect.String:
 				fieldValue.SetString(value)
 			case reflect.Int:
-				intValue, _ := strconv.Atoi(value)
+				intValue, err := strconv.Atoi(value)
+				if err != nil {
+					return fmt.Errorf("error config item in line %d (need int)", k+1)
+				}
 				fieldValue.SetInt(int64(intValue))
+			case reflect.Float32, reflect.Float64:
+				floatValue, err := strconv.ParseFloat(value, 64)
+				if err != nil {
+					return fmt.Errorf("error config item in line %d", k+1)
+				}
+				fieldValue.SetFloat(floatValue)
+			default:
+				err = fmt.Errorf("error type: %v", structField.Type.Kind())
 			}
 
 			break
