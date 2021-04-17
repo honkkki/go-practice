@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"unsafe"
 )
 
 // 嵌套结构体
@@ -32,5 +33,7 @@ func main() {
 
 	h1 := Human{}
 	fmt.Println(h1==Human{})		// 空结构体
+	fmt.Println(unsafe.Sizeof(h1))
+	fmt.Println(unsafe.Sizeof(human))
 
 }
