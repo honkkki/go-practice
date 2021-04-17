@@ -21,6 +21,7 @@ func main() {
 	go test(ch, ch2)
 	fmt.Println("main")
 
-	for _ = range ch2 {
+	for v := range ch2 {
+		fmt.Println(v)
 	}
 }
