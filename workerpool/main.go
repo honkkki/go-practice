@@ -41,6 +41,7 @@ func worker(jobChan chan *Job, resChan chan *Result) {
 
 }
 
+// 创建num个goroutine
 func workerPool(num int, jobChan chan *Job, resChan chan *Result) {
 	for i := 0; i < num; i++ {
 		go worker(jobChan, resChan)
