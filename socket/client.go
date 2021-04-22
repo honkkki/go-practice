@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	conn, err := net.Dial("tcp", "127.0.0.1:6380")
+	conn, err := net.Dial("tcp", "127.0.0.1:6333")
 	if err != nil {
 		fmt.Println("连接服务器错误：", err)
 		return
@@ -31,7 +31,7 @@ func main() {
 			break
 		}
 
-		var buf [200]byte
+		var buf [256]byte
 		n, err := conn.Read(buf[:])
 
 		if err != nil {

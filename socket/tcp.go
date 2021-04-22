@@ -1,26 +1,30 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
 	"net"
 )
 
+type connInfo struct {
+	id int
+	conn net.Conn
+}
+
 // 处理任务
-func process(conn net.Conn) {
+func process(connInfo *connInfo) {
+	conn := connInfo.conn
 	defer conn.Close()
 
 	for {
-		reader := bufio.NewReader(conn)
-		var buf [200]byte
-		n, err := reader.Read(buf[:])
+		buf := make([]byte, 512)
+		n, err := conn.Read(buf)
 
 		if err != nil {
 			fmt.Println("读取客户端数据失败: ", err)
 			return
 		}
 
-		fmt.Println("从客户端收到的数据：", string(buf[:n]))
+		fmt.Printf("从客户端id:%d 收到数据: %v\n", connInfo.id, string(buf[:n]))
 		conn.Write([]byte("服务器已收到数据"))
 	}
 }
@@ -32,14 +36,21 @@ func main() {
 		return
 	}
 
+	var id int
+
 	for {
+		id++
 		conn, err := listen.Accept()
+		connInfo := &connInfo{
+			id:   id,
+			conn: conn,
+		}
 
 		if err != nil {
 			fmt.Printf("conn failed: %v \n", err)
 			continue
 		}
 
-		go process(conn)
+		go process(connInfo)
 	}
 }
