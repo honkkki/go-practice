@@ -29,7 +29,7 @@ func write(i int) {
 	//mlock.Lock()
 	rwlock.Lock()
 	num++
-	m.Store(i, time.Now())
+	m.Store(i, time.Now().Nanosecond())
 	time.Sleep(time.Millisecond * 10)
 	//mlock.Unlock()
 	rwlock.Unlock()

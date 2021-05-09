@@ -11,10 +11,12 @@ func main() {
 	t := reflect.TypeOf(a)
 	fmt.Println(t.Name())
 	fmt.Printf("%T\n", t)
+	fmt.Println("----------------------------------")
 
 	// 空接口判断值类型 接口类型转为具体值类型
 	var itf interface{}
 	itf = 1
+	fmt.Printf("%T\n", itf)
 	v := itf.(int)
 	fmt.Println(v)
 	fmt.Printf("%T\n", v) // int
