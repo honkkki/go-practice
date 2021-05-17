@@ -14,7 +14,16 @@ func main()  {
 }
 
 func hello(w http.ResponseWriter, r *http.Request)  {
-	fmt.Fprintf(w, "hello golang http")
+	// 获取get参数
+	query := r.URL.Query()
+	name := query.Get("name")
+	fmt.Fprintf(w, "hello! %s", name)
+
+	// 获取post参数
+	if r.Method == "POST" {
+		r.ParseForm()
+		r.FormValue("name")
+	}
 }
 
 func handler(w http.ResponseWriter, r *http.Request)  {
