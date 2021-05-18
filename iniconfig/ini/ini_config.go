@@ -11,6 +11,7 @@ import (
 type Config struct {
 	MysqlConfig  `ini:"mysql"`
 	ServerConfig `ini:"server"`
+	RedisConfig `ini:"redis"`
 }
 
 type MysqlConfig struct {
@@ -24,6 +25,11 @@ type MysqlConfig struct {
 type ServerConfig struct {
 	Ip   string `ini:"ip"`
 	Port int    `ini:"port"`
+}
+
+type RedisConfig struct {
+	Host string `ini:"host"`
+	Port int `ini:"port"`
 }
 
 func UnMarshal(data []byte, res interface{}) (err error) {

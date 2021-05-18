@@ -1,5 +1,8 @@
 .idea
 logger/log_file/*.log
+config.ini
+
+
 
 
 

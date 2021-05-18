@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-func main()  {
+func main() {
 	start := time.Now()
 	ch := make(chan string)
 	for _, url := range os.Args[1:] {
@@ -24,7 +24,7 @@ func main()  {
 }
 
 // 子协程
-func spider(url string, ch chan<- string)  {
+func spider(url string, ch chan<- string) {
 	start := time.Now()
 	resp, err := http.Get(url)
 	if err != nil {
