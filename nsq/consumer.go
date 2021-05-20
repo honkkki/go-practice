@@ -15,7 +15,7 @@ func (c *Consumer) HandleMessage(m *nsq.Message) error {
 		return nil
 	}
 
-	fmt.Println("get data from nsq: ", string(m.Body))
+	fmt.Println("get data from nsq: ", string(m.Body), "time: ", time.Unix(m.Timestamp, 0).Format("2006-01-02 15:04:05"))
 	return nil
 }
 
@@ -28,9 +28,11 @@ func initConsumer(topic, channel, addr string) error {
 		return err
 	}
 
+	// 消费时回调对象的方法
 	consumer := &Consumer{}
 	c.AddHandler(consumer)
 
+	// 连接nsq lookupd http
 	err = c.ConnectToNSQLookupd(addr)
 	if err != nil {
 		return err
