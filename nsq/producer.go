@@ -23,6 +23,7 @@ func initProducer(addr string) error {
 }
 
 func main() {
+	// nsqd
 	addr := "127.0.0.1:4150"
 	err := initProducer(addr)
 	if err != nil {
