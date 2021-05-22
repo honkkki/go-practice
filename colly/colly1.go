@@ -2,12 +2,16 @@ package main
 
 import (
 	"bufio"
+	"bytes"
 	"fmt"
 	"github.com/gocolly/colly"
 	"io"
 	"log"
+	"math/rand"
 	"net/http"
 	"os"
+	"strconv"
+	"strings"
 )
 
 var (
@@ -23,24 +27,28 @@ func init() {
 	c.Limits([]*colly.LimitRule{
 		{
 			//DomainGlob: "",
-			Parallelism: 5,
+			Parallelism: 6,
 		},
 	})
 }
 
-func downloadImg(val, movieName string) {
-	err := os.MkdirAll("./img", 0777)
+func downloadImg(imgUrl, fileName, dirName string) {
+	err := os.MkdirAll(dirName, 0777)
 	if err != nil {
 		log.Fatal("make dir failed: ", err)
 	}
 
 	// save images as files
-	resp, _ := http.Get(val)
+	resp, _ := http.Get(imgUrl)
 	//savePath := "./img/" + strings.Split(val, "/")[7]
-	savePath := "./img/" + movieName + ".jpg"
+	if !strings.HasSuffix(fileName, ".jpg") {
+		fileName = fileName + ".jpg"
+	}
+	savePath := dirName + "/" + fileName
 	file, _ := os.Create(savePath)
+	defer file.Close()
 	buf := bufio.NewWriter(file)
-	_, err = io.Copy(buf, resp.Body)
+	_, err = io.Copy(file, resp.Body)
 	if err != nil {
 		log.Fatal("download img failed: ", err)
 	}
@@ -57,7 +65,7 @@ func spiderDb() {
 		// download images
 		val, bool := e.DOM.Find(".pic img").Attr("src")
 		if bool == true {
-			downloadImg(val, movieName)
+			downloadImg(val, movieName, "./img/")
 		}
 	})
 
@@ -78,6 +86,46 @@ func spiderDb() {
 	c.Wait()
 }
 
+func spiderLhc() {
+	imgC := c.Clone()
+	c.OnHTML(".photo-wp", func(e *colly.HTMLElement) {
+		imgUrl := e.ChildAttr("a img", "src")
+		fmt.Println(imgUrl)
+		//fileName := strings.Split(imgUrl, "/")[7]
+		//downloadImg(imgUrl, fileName, "./img/lhc")
+		imgC.Visit(imgUrl)
+	})
+
+
+	// 执行下一页
+	c.OnHTML(".photo-wp", func(e *colly.HTMLElement) {
+		e.Request.Visit(e.ChildAttr("a", "href"))
+	})
+
+	c.OnError(func(_ *colly.Response, err error) {
+		fmt.Println("Something went wrong:", err)
+	})
+
+	c.OnRequest(func(r *colly.Request) {
+		fmt.Println("正在抓取：", r.URL)
+	})
+
+	imgC.OnResponse(func(response *colly.Response) {
+		err := os.MkdirAll("./img/lhc", 0777)
+		if err != nil {
+			log.Fatal("make dir failed: ", err)
+		}
+		f, _ := os.Create("./img/lhc/" + strconv.Itoa(int(rand.Int31())) + ".jpg")
+		defer f.Close()
+		io.Copy(f, bytes.NewReader(response.Body))
+	})
+
+	c.Visit("https://movie.douban.com/celebrity/1410267/photo/2548187252/")
+	c.Wait()
+	imgC.Wait()
+}
+
 func main() {
-	spiderDb()
+	//spiderDb()
+	spiderLhc()
 }
