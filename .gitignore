@@ -2,6 +2,7 @@
 logger/log_file/*.log
 config.ini
 colly/img
+colly/cookie.txt
 
 
 
