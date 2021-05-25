@@ -13,7 +13,7 @@ import (
 )
 
 var (
-	c           *colly.Collector
+	co           *colly.Collector
 	downLoadNum int32
 	cookie      string
 )
@@ -25,12 +25,12 @@ func init() {
 	reader := bufio.NewReader(file)
 	cookie, _ = reader.ReadString('\n')
 
-	c = colly.NewCollector(
+	co = colly.NewCollector(
 		colly.Async(true),
 		colly.UserAgent("Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36"),
 	)
 
-	c.Limits([]*colly.LimitRule{
+	co.Limits([]*colly.LimitRule{
 		{
 			//DomainGlob: "",
 			Parallelism: 10,
@@ -39,13 +39,13 @@ func init() {
 }
 
 func spiderWithCookie() {
-	imgC := c.Clone()
+	imgC := co.Clone()
 
-	c.OnRequest(func(r *colly.Request) {
+	co.OnRequest(func(r *colly.Request) {
 		r.Headers.Set("Cookie", cookie)
 	})
 
-	c.OnHTML(".update", func(e *colly.HTMLElement) {
+	co.OnHTML(".update", func(e *colly.HTMLElement) {
 		// 找出包含update的class 且 class name = update magnifier
 		if e.Attr("class") == "update magnifier" {
 			rawUrl := e.ChildAttr("a", "href")
@@ -78,16 +78,16 @@ func spiderWithCookie() {
 	})
 
 	// 执行下一页
-	c.OnHTML(".photo-wp", func(e *colly.HTMLElement) {
+	co.OnHTML(".photo-wp", func(e *colly.HTMLElement) {
 		e.Request.Visit(e.ChildAttr("a", "href"))
 	})
 
-	c.OnError(func(_ *colly.Response, err error) {
+	co.OnError(func(_ *colly.Response, err error) {
 		fmt.Println("Something went wrong:", err)
 	})
 
-	c.Visit("https://movie.douban.com/celebrity/1269255/photo/2644082853/#photo")
-	c.Wait()
+	co.Visit("https://movie.douban.com/celebrity/1419037/photo/2646824033/#photo")
+	co.Wait()
 	imgC.Wait()
 }
 
