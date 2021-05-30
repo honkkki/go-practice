@@ -10,6 +10,7 @@ func main() {
 
 	// 闭包引用的外部for循环的s
 	for _, s := range strs {
+		//s := s
 		go func() {
 			fmt.Printf("%s ", s)
 		}()
