@@ -27,6 +27,7 @@ func NewFileLogger(fp, fn string, logChanSize int) *FileLogger {
 }
 
 func (f *FileLogger) initFile() {
+	os.MkdirAll("./log_file", 0755)
 	fileAllName := fmt.Sprintf("%s/%s.log", f.filePath, f.fileName)
 	file, err := os.OpenFile(fileAllName, os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0755)
 	if err != nil {

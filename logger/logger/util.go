@@ -27,7 +27,7 @@ func GetLineInfo() (fileName string, funcName string, lineNo int) {
 	return
 }
 
-// 封装每条日志信息
+// WriteLog 封装每条日志信息
 func WriteLog(LogLevel int, args ...interface{}) *LogData {
 	now := time.Now()
 	nowTime := now.Format("2006-01-02 15:04:05")

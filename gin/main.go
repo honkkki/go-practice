@@ -58,7 +58,7 @@ func struct2Json(c *gin.Context)  {
 	var user User
 	user.Name = "irene"
 	user.Age = 20
-	c.JSON(http.StatusOK, user)
+	c.JSON(http.StatusOK, &user)
 }
 
 func main()  {
