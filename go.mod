@@ -1,6 +1,6 @@
 module go-practice
 
-go 1.16
+go 1.13
 
 require (
 	github.com/PuerkitoBio/goquery v1.6.1 // indirect
@@ -27,7 +27,7 @@ require (
 	github.com/temoto/robotstxt v1.1.2 // indirect
 	github.com/urfave/cli/v2 v2.3.0
 	go.uber.org/multierr v1.7.0 // indirect
-	go.uber.org/zap v1.17.0 // indirect
+	go.uber.org/zap v1.17.0
 	golang.org/x/crypto v0.0.0-20210322153248-0c34fe9e7dc2 // indirect
 	golang.org/x/net v0.0.0-20210510120150-4163338589ed // indirect
 	golang.org/x/sys v0.0.0-20210514084401-e8d321eab015 // indirect
