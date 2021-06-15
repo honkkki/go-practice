@@ -7,7 +7,7 @@ import (
 )
 
 var logger LoggerInterface
-var config = make(map[string]string, 100)
+var config = make(map[string]string)
 
 // 初始化基本配置信息
 func init() {
