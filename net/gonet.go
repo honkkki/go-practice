@@ -31,9 +31,8 @@ func spider(url string, ch chan<- string) {
 		ch <- fmt.Sprint(err)
 		return
 	}
-
+	defer resp.Body.Close()
 	nbytes, err := io.Copy(ioutil.Discard, resp.Body)
-	resp.Body.Close()
 	if err != nil {
 		ch <- fmt.Sprint(err)
 		return
