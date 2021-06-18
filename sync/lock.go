@@ -7,6 +7,7 @@ import (
 
 var (
 	x    int
+	y    int
 	wg   sync.WaitGroup
 	lock sync.Mutex
 )
@@ -18,6 +19,7 @@ func add() {
 		lock.Lock()
 		x++
 		// 解锁
+		y++
 		lock.Unlock()
 	}
 
@@ -31,4 +33,5 @@ func main() {
 
 	wg.Wait()
 	fmt.Println(x)
+	fmt.Println(y)
 }

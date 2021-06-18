@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"crypto/sha256"
+	"fmt"
+)
 
 // 字符操作
 func main() {
@@ -22,6 +25,11 @@ func main() {
 	fmt.Println(string(s1Arr[0]))
 	fmt.Println(string(s1Arr))
 	fmt.Println(len(string(s1Arr)))		// 字节数就是长度
+
+	str := "x"
+	str1 := "X"
+	fmt.Printf("%x\n", sha256.Sum256([]byte(str)))
+	fmt.Printf("%x\n", sha256.Sum256([]byte(str1)))
 
 
 
