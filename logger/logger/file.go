@@ -27,6 +27,7 @@ func NewFileLogger(fp, fn string, logChanSize int) *FileLogger {
 }
 
 func (f *FileLogger) initFile() {
+	os.MkdirAll("./log_file", 0755)
 	fileAllName := fmt.Sprintf("%s/%s.log", f.filePath, f.fileName)
 	file, err := os.OpenFile(fileAllName, os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0755)
 	if err != nil {
@@ -59,7 +60,6 @@ func (f *FileLogger) checkSplitDate()  {
 // 写日志goroutine
 func (f *FileLogger) writeLogBg() {
 	for logData := range f.LogDataChan {
-		f.checkSplitDate()
 		fmt.Fprintf(f.file, "%s %s %s:%d %s %s \n", logData.LevelStr,
 			logData.TimeStr, logData.FileName, logData.LineNo,
 			logData.FuncName, logData.Message)
@@ -76,6 +76,7 @@ func (f *FileLogger) SetLevel(level int) {
 func (f *FileLogger) Debug(args ...interface{}) {
 	f.SetLevel(DEBUG)
 	logData := WriteLog(f.level, args...)
+	f.checkSplitDate()
 	select {
 	case f.LogDataChan <- logData:
 	default:
@@ -85,6 +86,7 @@ func (f *FileLogger) Debug(args ...interface{}) {
 func (f *FileLogger) Info(args ...interface{}) {
 	f.SetLevel(INFO)
 	logData := WriteLog(f.level, args...)
+	f.checkSplitDate()
 	select {
 	case f.LogDataChan <- logData:
 	default:
@@ -94,6 +96,7 @@ func (f *FileLogger) Info(args ...interface{}) {
 func (f *FileLogger) Error(args ...interface{}) {
 	f.SetLevel(ERROR)
 	logData := WriteLog(f.level, args...)
+	f.checkSplitDate()
 	select {
 	case f.LogDataChan <- logData:
 	default:

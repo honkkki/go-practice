@@ -18,8 +18,8 @@ type Email struct {
 
 type Emp struct {
 	name string
-	*Addr
-	*Email
+	Addr Addr
+	Email
 }
 
 func main() {
@@ -30,17 +30,17 @@ func main() {
 
 	emp := Emp{
 		name:  "jisoo",
-		Addr:  &Addr{
+		Addr:  Addr{
 			Province:    "gd",
 			City:        "sz",
 			CreatedTime: 1,
 		},
-		Email: &Email{
+		Email: Email{
 			Url:         "qq@qq.com",
 			CreatedTime: 1,
 		},
 	}
 
-	fmt.Println(emp, emp.Addr.City, emp.Email.Url)
+	fmt.Println(emp, emp.Addr.City, emp.Url)
 
 }

@@ -26,8 +26,7 @@ func writeProto(filename string) (err error) {
 			Type:   phone.PhoneType_WORK,
 			Number: strconv.Itoa(rand.Intn(99999999)),
 		}
-		person.Phone = append(person.Phone, phoneInfo1)
-		person.Phone = append(person.Phone, phoneInfo2)
+		person.Phone = append(person.Phone, phoneInfo1, phoneInfo2)
 		contactBook.Person = append(contactBook.Person, person)
 	}
 

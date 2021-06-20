@@ -12,7 +12,6 @@ func main()  {
 	fmt.Println(arr)
 	fmt.Printf("%T", arr)
 
-	
 
 
 }
