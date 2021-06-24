@@ -7,18 +7,18 @@ import (
 )
 
 // 使用context实现goroutine的退出
-func main()  {
+func main() {
 	ch := make(chan struct{})
 	ctx, cancel := context.WithCancel(context.Background())
 
 	go func(ctx context.Context) {
-		for  {
+		for {
 			select {
 			case <-ctx.Done():
-				ch<- struct{}{}
+				ch <- struct{}{}
 				return
 			default:
-				fmt.Println("waiting done")
+				fmt.Println("working")
 			}
 
 			time.Sleep(300 * time.Millisecond)
@@ -26,7 +26,7 @@ func main()  {
 	}(ctx)
 
 	go func() {
-		time.Sleep(3*time.Second)
+		time.Sleep(3 * time.Second)
 		cancel()
 	}()
 
