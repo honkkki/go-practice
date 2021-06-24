@@ -4,5 +4,6 @@ import "testing"
 
 func TestEs(t *testing.T) {
 	InitEs()
-	Read()
+	//Read()
+	ReadData("karina")
 }

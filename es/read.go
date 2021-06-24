@@ -11,7 +11,7 @@ import (
 func Read()  {
 	//mp := elastic.NewMatchPhraseQuery("message", "i")
 	mp := elastic.NewQueryStringQuery("歌手")
-	res, err := client.Search("messages").Query(mp).Do(context.Background())
+	res, err := client.Search("message").Query(mp).Do(context.Background())
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -25,7 +25,7 @@ func Read()  {
 
 	fmt.Println("---------------------")
 	mp1 := elastic.NewQueryStringQuery("karina")
-	res1, err := client.Search("messages").Query(mp1).Do(context.Background())
+	res1, err := client.Search("message").Query(mp1).Do(context.Background())
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -37,5 +37,22 @@ func Read()  {
 		fmt.Printf("%#v\n", t1)
 	}
 }
+
+func ReadData(params string)  {
+	mp := elastic.NewQueryStringQuery(params)
+	res, err := client.Search("message").Query(mp).Do(context.Background())
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	var tweet Tweet
+	fmt.Println("search success num: ", res.Hits.TotalHits.Value)
+	for _, v := range res.Each(reflect.TypeOf(tweet)) {
+		t := v.(Tweet)
+		fmt.Printf("%#v\n", t)
+	}
+}
+
+
 
 

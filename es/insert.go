@@ -33,7 +33,7 @@ func Insert()  {
 
 	// add index
 	_, err := client.Index().
-		Index("messages").
+		Index("message").
 		//Id("").
 		BodyJson(tweet).
 		Do(context.Background())
@@ -43,5 +43,20 @@ func Insert()  {
 	}
 
 	fmt.Println("add success!")
+}
+
+func InsertData(data interface{})  {
+	// add index
+	_, err := client.Index().
+		Index("message").
+		//Id("").
+		BodyJson(data).
+		Do(context.Background())
+
+	if err != nil {
+		log.Fatal("add index fail: ", err)
+	}
+
+	fmt.Println("add to elastic success!")
 }
 
