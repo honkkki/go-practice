@@ -6,6 +6,9 @@ import (
 	"fmt"
 	"github.com/Shopify/sarama"
 	"go-practice/es"
+	"log"
+	"os"
+	"os/signal"
 )
 
 func main() {
@@ -15,6 +18,16 @@ func main() {
 		fmt.Printf("failed to start consumer: %s\n", err)
 		return
 	}
+
+	defer func() {
+		if err := consumer.Close(); err != nil {
+			log.Fatal(err)
+		}
+	}()
+
+	c := make(chan os.Signal, 1)
+	signal.Notify(c, os.Interrupt)
+
 	partitionList, err := consumer.Partitions("message")
 	if err != nil {
 		fmt.Println("failed to get the list of partitions: ", err)
@@ -45,6 +58,9 @@ func main() {
 	}
 
 	select {
+	case <-c:
+		fmt.Println("\nclose consumer process")
+		break
 	}
 
 }
