@@ -45,6 +45,7 @@ require (
 	github.com/jonboulle/clockwork v0.2.2 // indirect
 	github.com/jpillora/backoff v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.11 // indirect
+	github.com/juju/ratelimit v1.0.1 // indirect
 	github.com/julienschmidt/httprouter v1.3.0 // indirect
 	github.com/kennygrant/sanitize v1.2.4 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
@@ -67,6 +68,7 @@ require (
 	go.etcd.io/bbolt v1.3.6 // indirect
 	go.uber.org/atomic v1.8.0 // indirect
 	go.uber.org/multierr v1.7.0 // indirect
+	go.uber.org/ratelimit v0.2.0 // indirect
 	go.uber.org/zap v1.17.0
 	golang.org/x/lint v0.0.0-20190313153728-d0100b6bd8b3 // indirect
 	golang.org/x/net v0.0.0-20210614182718-04defd469f4e

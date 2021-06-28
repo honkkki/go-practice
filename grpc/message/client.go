@@ -23,8 +23,4 @@ func main() {
 		fmt.Printf("could not greet: %v", err)
 	}
 	fmt.Printf("Greeting: %s!\n", r.Message)
-
-	c1 := pb.NewPlusClient(conn)
-	res, _ := c1.PlusOne(context.Background(), &pb.NumRequest{Num: 1})
-	fmt.Println("res: ", res)
 }
