@@ -12,7 +12,6 @@ import (
 )
 
 func main() {
-	// 连接服务器
 	// 连接用户服务
 	conn1, err := grpc.Dial("127.0.0.1:9988", grpc.WithInsecure())
 	// 连接消息服务

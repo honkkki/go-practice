@@ -17,7 +17,7 @@ func main() {
 	defer conn.Close()
 
 	c := pb.NewUserClient(conn)
-	// 调用服务端的SayHello
+
 	r, err := c.GetUserInfo(context.Background(), &pb.UserReq{Id: 1})
 	if err != nil {
 		fmt.Printf("get user info fail: %v", err)
