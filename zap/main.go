@@ -44,6 +44,6 @@ func simpleHttpGet(url string) {
 		sugarLogger.Info("Success..",
 			zap.String("statusCode", resp.Status),
 			zap.String("url", url))
-		resp.Body.Close()
 	}
+	resp.Body.Close()
 }
