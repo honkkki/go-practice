@@ -19,9 +19,13 @@ func echo(c net.Conn, shout string, delay time.Duration) {
 
 func handleConnEcho(c net.Conn) {
 	input := bufio.NewScanner(c)
+
+	// 阻塞监听客户端输入直到客户端断开
 	for input.Scan() {
-		echo(c, input.Text(), 1*time.Second)
+		go echo(c, input.Text(), 1*time.Second)
 	}
+
+	fmt.Println("close server")
 	c.Close()
 }
 
