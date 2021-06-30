@@ -2,9 +2,7 @@ syntax = "proto3"; // 版本声明，使用Protocol Buffers v3版本
 
 package user; // 包名
 
-// 定义一个打招呼服务
 service User {
-  // SayHello 方法
   rpc GetUserInfo (UserReq) returns (UserInfo) {}
 }
 
