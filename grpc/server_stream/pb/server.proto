@@ -4,17 +4,14 @@ package server_stream; // 包名
 
 // 定义一个打招呼服务
 service Greeter {
-  // SayHello 方法
   rpc SayHelloList (HelloRequest) returns (stream HelloReply) {}
 }
 
 
-// 包含人名的一个请求消息
 message HelloRequest {
   string name = 1;
 }
 
-// 包含问候语的响应消息
 message HelloReply {
   string message = 1;
 }

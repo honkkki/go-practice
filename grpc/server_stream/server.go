@@ -33,7 +33,7 @@ func main() {
 	// 该goroutine读取gRPC请求，然后调用已注册的处理程序来响应它们。
 	err = s.Serve(lis)
 	if err != nil {
-		fmt.Printf("failed to serve: %v", err)
+		fmt.Printf("failed to serve: %v\n", err)
 		return
 	}
 }
