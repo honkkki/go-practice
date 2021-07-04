@@ -5,6 +5,11 @@ import (
 	"unsafe"
 )
 
+type Pet struct {
+	Name string
+	Age int
+}
+
 func main() {
 	a := 1
 	switch {
@@ -28,6 +33,9 @@ func main() {
 	fmt.Println(unsafe.Sizeof(num))
 	fmt.Println(unsafe.Sizeof(str))
 
+	pet := Pet{}
+	fmt.Println(unsafe.Sizeof(pet))		// 24 string=16+int64=8
+	fmt.Println(unsafe.Sizeof(&pet))	// 8
 
 
 }
