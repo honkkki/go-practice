@@ -40,5 +40,14 @@ func main()  {
 
 	fmt.Println(m.show("hi"))
 
+	var arr interface{}
+	arr = []int{1,2,3}
+	fmt.Println(arr)
+	//fmt.Println(arr[1])		// 不能这样取值
+
+	var num interface{}
+	num = 1
+	fmt.Println(1==num)			// true 比较是相等的 但无法当做int类型使用 需要断言
+
 
 }
