@@ -4,16 +4,17 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	_ "net/http/pprof"
 )
 
-func main()  {
+func main() {
 	// 配置路由与处理逻辑
 	http.HandleFunc("/", handler)
 	http.HandleFunc("/hello", hello)
 	log.Fatal(http.ListenAndServe("127.0.0.1:8080", nil))
 }
 
-func hello(w http.ResponseWriter, r *http.Request)  {
+func hello(w http.ResponseWriter, r *http.Request) {
 	// 获取get参数
 	query := r.URL.Query()
 	name := query.Get("name")
@@ -26,8 +27,7 @@ func hello(w http.ResponseWriter, r *http.Request)  {
 	}
 }
 
-func handler(w http.ResponseWriter, r *http.Request)  {
+func handler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "path = %q \n", r.URL.Path)
-
 
 }
