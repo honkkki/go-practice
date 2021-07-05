@@ -26,11 +26,11 @@ func req(ctx context.Context) {
 	c := make(chan ResPack, 1)
 	req, _ := http.NewRequest("GET", "http://localhost:9000", nil)
 	// 开启一个goroutine去请求http server 通过channel有没有值判断请求是否完成
-	go func() {
+	go func(c chan<- ResPack) {
 		resp, err := client.Do(req)
 		pack := ResPack{res: resp, err: err}
 		c <- pack
-	}()
+	}(c)
 
 	select {
 	case <-ctx.Done():

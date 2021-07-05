@@ -16,9 +16,8 @@ func hello()  {
 func main()  {
 	// 计数
 	wg.Add(1)
-	// 让小弟取执行
 	go hello()
 	fmt.Println("main")
-	// 等待小弟完成 计数器为0
+	// 等待子goroutine完成 计数器为0
 	wg.Wait()
 }

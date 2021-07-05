@@ -18,7 +18,8 @@ func hello(w http.ResponseWriter, r *http.Request) {
 	// 获取get参数
 	query := r.URL.Query()
 	name := query.Get("name")
-	fmt.Fprintf(w, "hello! %s", name)
+	fmt.Fprintf(w, "hello! %s\n", name)
+	w.Write([]byte("hello my friend\n"))
 
 	// 获取post参数
 	if r.Method == "POST" {

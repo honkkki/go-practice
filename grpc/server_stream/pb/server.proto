@@ -1,0 +1,18 @@
+syntax = "proto3"; // 版本声明，使用Protocol Buffers v3版本
+
+package server_stream; // 包名
+
+// 定义一个打招呼服务
+service Greeter {
+  rpc SayHelloList (HelloRequest) returns (stream HelloReply) {}
+}
+
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloReply {
+  string message = 1;
+}
+
