@@ -1,3 +1,4 @@
+// 使用channel控制goroutine退出.
 package main
 
 import (
@@ -5,11 +6,7 @@ import (
 	"time"
 )
 
-var (
-
-)
-
-func workerG(ch <-chan struct{})  {
+func workerG(ch <-chan struct{}) {
 	fmt.Println("start working")
 	for {
 		select {
@@ -22,16 +19,15 @@ func workerG(ch <-chan struct{})  {
 	}
 }
 
-
-func main()  {
+func main() {
 	// 缺点 需要维护一个共用的channel
 	ch := make(chan struct{})
 	go workerG(ch)
 
-	time.Sleep(3*time.Second)
-	ch<- struct{}{}
+	time.Sleep(3 * time.Second)
+	ch <- struct{}{}
 
 	fmt.Println("回到主goroutine")
-	time.Sleep(2*time.Second)
+	time.Sleep(2 * time.Second)
 	fmt.Println("finish")
 }

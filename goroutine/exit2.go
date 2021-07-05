@@ -1,3 +1,4 @@
+// 使用context控制goroutine退出.
 package main
 
 import (
