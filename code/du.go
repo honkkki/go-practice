@@ -12,7 +12,7 @@ import (
 
 var sema = make(chan struct{}, 20)
 
-// get dir/files[].
+// dirFiles get dir/files[].
 // 获取文件夹下所有文件
 func dirFiles(dir string) []os.FileInfo {
 	sema <- struct{}{}
@@ -28,7 +28,7 @@ func dirFiles(dir string) []os.FileInfo {
 	return files
 }
 
-// 遍历目录计算文件总大小
+// walkDir 遍历目录计算文件总大小
 func walkDir(dir string, fileSize chan<- int64, wg *sync.WaitGroup) {
 	defer wg.Done()
 	files := dirFiles(dir)
