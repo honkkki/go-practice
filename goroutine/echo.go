@@ -48,8 +48,8 @@ func handleConnEcho(c net.Conn) {
 			select {
 			case <-timer.C:
 				fmt.Println("time to close connection")
-				c.Close()
 				cancel()
+				c.Close()
 				return
 			case msg := <-message:
 				wg.Add(1)
@@ -84,6 +84,6 @@ func main() {
 			continue
 		}
 
-		handleConnEcho(conn)
+		go handleConnEcho(conn)
 	}
 }

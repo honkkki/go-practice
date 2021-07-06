@@ -16,6 +16,7 @@ func main() {
 
 	fmt.Println(x)
 	fmt.Println(y)
+	fmt.Println("-------------")
 
 	ch1 <- 1
 	ch1 <- 1
@@ -24,7 +25,13 @@ func main() {
 	close(ch1)
 	c := <-ch1
 	fmt.Println(c)
+	fmt.Println("-------------")
+
 	for v := range ch1 {
 		fmt.Println(v)
 	}
+
+	cc := <-ch1
+	fmt.Println(cc)
+
 }
