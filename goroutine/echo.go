@@ -29,7 +29,7 @@ func handleConnEcho(c net.Conn) {
 			ctx, cancel := context.WithCancel(context.Background())
 			fmt.Println("server down after 10 seconds!")
 			go func(ctx context.Context) {
-				tick := time.NewTicker(1*time.Second)
+				tick := time.NewTicker(1 * time.Second)
 				defer tick.Stop()
 				for i := 10; i > 0; i-- {
 					select {
