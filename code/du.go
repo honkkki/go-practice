@@ -21,7 +21,7 @@ func dirFiles(dir string) []os.FileInfo {
 	}()
 	files, err := ioutil.ReadDir(dir)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "read dir error: %v", err)
+		fmt.Fprintf(os.Stderr, "read dir error: %v\n", err)
 		return nil
 	}
 
@@ -51,6 +51,7 @@ func main() {
 	// 输入-v表示打印计算详情
 	showDetail := flag.Bool("v", false, "show detail message")
 	flag.Parse()
+	// tick nil now. if show detail it will be a tick
 	var tick <-chan time.Time
 	if *showDetail {
 		tick = time.Tick(100 * time.Millisecond)
