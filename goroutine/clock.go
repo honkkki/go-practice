@@ -16,7 +16,7 @@ func main() {
 	for {
 		conn, err := listener.Accept()
 		if err != nil {
-			log.Println(err) // e.g., connection aborted
+			log.Println(err)
 			continue
 		}
 		go handleConn(conn) // handle one connection at a time

@@ -19,6 +19,7 @@ var (
 	messages = make(chan string)
 )
 
+// broadcaster 其他goroutine通过操作channel来改变map 且只有一个goroutine执行该函数 没有并发竞争问题
 func broadcaster(ctx context.Context, wg *sync.WaitGroup) {
 	clients := make(map[client]bool)
 	for {
