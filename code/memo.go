@@ -43,12 +43,17 @@ func (memo *Memo) Get(key string) (interface{}, error) {
 		memo.mu.Unlock()
 		e.res.value, e.res.err = memo.f(key)
 		close(e.ready)
+	} else {
+		memo.mu.Unlock()
+		<-e.ready
 	}
 
+	return e.res.value, e.res.err
 }
 
 func httpGetBody(url string) (interface{}, error) {
 	resp, err := http.Get(url)
+	fmt.Println("http get")
 	if err != nil {
 		return nil, err
 	}
@@ -65,6 +70,8 @@ func main() {
 		"https://books.studygolang.com",
 		"https://golang.org",
 		"https://gobyexample.com",
+		"https://golang.org",
+		"https://golang.org",
 	}
 
 	var wg sync.WaitGroup
