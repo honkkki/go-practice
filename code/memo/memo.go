@@ -1,3 +1,4 @@
+// 互斥锁的并发处理
 package main
 
 import (
@@ -19,7 +20,7 @@ type entry struct {
 
 // A Memo caches the results of calling a Func.
 type Memo struct {
-	f     Func
+	f     Func			// http get
 	cache map[string]*entry
 	mu    sync.Mutex
 }
