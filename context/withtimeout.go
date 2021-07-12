@@ -30,8 +30,7 @@ func main() {
 	rand.Seed(time.Now().Unix())
 	randNum = rand.Intn(3)
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*3)
+	defer cancel()
 	worker(ctx)
-	cancel()
-
 	fmt.Println("over")
 }
