@@ -24,7 +24,7 @@ func initSqlxDb() (err error) {
 		return err
 	}
 
-	sqlxDB.SetMaxOpenConns(100)
+	//sqlxDB.SetMaxOpenConns(100)
 	sqlxDB.SetMaxIdleConns(15)
 	return nil
 }
