@@ -34,7 +34,7 @@ func main() {
 	fmt.Println(unsafe.Sizeof(str))
 
 	pet := Pet{}
-	fmt.Println(unsafe.Sizeof(pet))		// 24 string=16+int64=8
+	fmt.Println(unsafe.Sizeof(pet))		// 24 string 16+int64 8
 	fmt.Println(unsafe.Sizeof(&pet))	// 8
 
 
