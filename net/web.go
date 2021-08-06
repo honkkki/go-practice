@@ -1,11 +1,14 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"log"
 	"net/http"
 	_ "net/http/pprof"
 )
+
+var id int
 
 func main() {
 	// 配置路由与处理逻辑
@@ -15,6 +18,7 @@ func main() {
 }
 
 func hello(w http.ResponseWriter, r *http.Request) {
+	id++
 	// 获取get参数
 	query := r.URL.Query()
 	name := query.Get("name")
@@ -26,6 +30,9 @@ func hello(w http.ResponseWriter, r *http.Request) {
 		r.ParseForm()
 		r.FormValue("name")
 	}
+	ctx := context.WithValue(r.Context(), "id", id)
+	newReq := r.WithContext(ctx)
+	fmt.Println("req id:", newReq.Context().Value("id").(int))
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
