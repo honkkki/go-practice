@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main()  {
+func main() {
 	// log打印文件与行号
 	//log.SetFlags(log.Lshortfile|log.LstdFlags)
 	//log.Println("hello")
@@ -10,20 +10,16 @@ func main()  {
 	ch := make(chan struct{})
 
 	go func() {
-		for c := range ch {
+		for c := range ch {		// error 阻塞
 			fmt.Println(c)
 		}
 	}()
 
-	ch<- struct {
-
-	}{}
+	ch <- struct{}{}
 
 	//close(ch)
 
-	select {
-
-	}
+	select {}		// error no case阻塞
 	//go func() {
 	//	ch <- struct{}{}
 	//	close(ch)
