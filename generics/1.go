@@ -15,8 +15,17 @@ func print[T any](s []T) {
 	}
 }
 
-func add[T Addable] (a, b T) T {
+func add[T Addable](a, b T) T {
 	return a + b
+}
+
+// 闭包
+func anony[T Addable](a,b T) func() T {
+	return func() T {
+		r := a
+		a = a + b
+		return r
+	}
 }
 
 func main() {
@@ -28,4 +37,11 @@ func main() {
 	fmt.Println(add(1, 2))
 	fmt.Println(add(1.1, 2.2))
 	fmt.Println(add("hello ", "golang"))
+
+	f := anony(0, 1)
+	fmt.Println(f())
+	fmt.Println(f())
+	fmt.Println(f())
+	fmt.Println(f())
+	fmt.Println(f())
 }
