@@ -8,7 +8,6 @@ import (
 )
 
 type Task struct {
-	name string
 	f    func()
 }
 
