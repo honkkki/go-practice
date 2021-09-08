@@ -83,11 +83,11 @@ func main() {
 		for {
 			select {
 			case <-sig:
-				defer listener.Close()
 				wg.Add(1)
 				fmt.Println("server quit")
 				cancel()
 				wg.Wait()
+				listener.Close()
 				os.Exit(1)
 			}
 		}

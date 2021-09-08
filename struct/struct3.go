@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// 结构体继承
+// Animal 结构体继承
 type Animal struct {
 	Name string
 }
@@ -10,6 +10,10 @@ type Animal struct {
 type Dog struct {
 	Feet int8
 	*Animal
+}
+
+func (d *Dog) move()  {
+	fmt.Println("dog move")
 }
 
 func (a *Animal) move()  {
@@ -28,6 +32,7 @@ func main()  {
 		},
 	}
 
+	d.Animal.move()
 	d.move()
 	d.wang()
 	fmt.Println(d.Name)

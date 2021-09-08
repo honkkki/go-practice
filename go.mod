@@ -48,6 +48,7 @@ require (
 	github.com/mattn/go-isatty v0.0.12 // indirect
 	github.com/nsqio/go-nsq v1.0.8
 	github.com/olivere/elastic/v7 v7.0.22
+	github.com/pkg/profile v1.6.0
 	github.com/prometheus/client_golang v1.5.1 // indirect
 	github.com/prometheus/common v0.10.0 // indirect
 	github.com/prometheus/procfs v0.6.0 // indirect
