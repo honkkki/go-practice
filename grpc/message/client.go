@@ -10,7 +10,7 @@ import (
 
 func main() {
 	// 连接服务器
-	conn, err := grpc.Dial("127.0.0.1:9999", grpc.WithInsecure())
+	conn, err := grpc.Dial("127.0.0.1:9999", grpc.WithInsecure(), grpc.WithBlock())
 	if err != nil {
 		fmt.Printf("faild to connect: %v", err)
 	}
