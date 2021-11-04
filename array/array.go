@@ -16,6 +16,13 @@ func main() {
 	fmt.Println(arr3)
 	fmt.Printf("%T \n", arr3)
 
+	a := [3]int{}
+	fmt.Println(a)
+
+	var arr [3]int
+	fmt.Println(len(arr))
+	fmt.Println(cap(arr))
+	fmt.Println(arr)
 
 
 }

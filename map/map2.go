@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	// 统计一个字符串单词出现次数
+	// 统计一个字符串字母出现次数
 	m1 := make(map[string]int)
 	str := "hello golang"
 	words := strings.Split(str, " ")
