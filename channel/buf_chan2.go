@@ -15,7 +15,6 @@ func main() {
 		fmt.Println(v)
 	}
 
-	//_, ok := <- ch
-	//fmt.Println(ok)
-
+	_, ok := <- ch
+	fmt.Println(ok)
 }
