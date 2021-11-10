@@ -60,7 +60,6 @@ func main() {
 	select {
 	case <-c:
 		fmt.Println("\nclose consumer process")
-		break
 	}
 
 }

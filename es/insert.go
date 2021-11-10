@@ -20,9 +20,9 @@ func InitEs()  {
 	var err error
 	client, err = elastic.NewClient(elastic.SetSniff(false), elastic.SetURL("http://localhost:9200/"))
 	if err != nil {
-		log.Fatal("connect es fail: ", err)
+		log.Fatal("connect to es fail: ", err)
 	}
-	fmt.Println("connect es success")
+	fmt.Println("connect to es success")
 }
 
 func Insert()  {
@@ -54,7 +54,8 @@ func InsertData(data interface{})  {
 		Do(context.Background())
 
 	if err != nil {
-		log.Fatal("add index fail: ", err)
+		log.Println("add index fail: ", err)
+		return
 	}
 
 	fmt.Println("add to elastic success!")

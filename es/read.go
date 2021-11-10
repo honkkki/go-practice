@@ -42,7 +42,8 @@ func ReadData(params string)  {
 	mp := elastic.NewQueryStringQuery(params)
 	res, err := client.Search("message").Query(mp).Do(context.Background())
 	if err != nil {
-		log.Fatal(err)
+		log.Println("query failed:", err)
+		return
 	}
 
 	var tweet Tweet
