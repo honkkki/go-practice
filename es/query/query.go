@@ -86,7 +86,12 @@ func Query(q string) {
 	boolQ.Must(elastic.NewMatchQuery("name", q))
 	// 范围查询
 	boolQ.Filter(elastic.NewRangeQuery("id").Gt(1636534343))
-	res, err := client.Search("product").Query(boolQ).Do(context.Background())
+	res, err := client.
+		Search("product").
+		Query(boolQ).
+		From(0).
+		Size(5).
+		Do(context.Background())
 	if err != nil {
 		log.Println(err)
 		return

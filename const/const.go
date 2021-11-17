@@ -9,6 +9,8 @@ const (
 	d        // 6
 	w        // 6
 	q = iota // 5
+	z
+	s = iota
 )
 
 const (
@@ -20,6 +22,6 @@ const (
 )
 
 func main() {
-	fmt.Println(a, b, c, d, w, q)
+	fmt.Println(a, b, c, d, w, q, z, s)
 	fmt.Println(e, f, g, x, y)
 }

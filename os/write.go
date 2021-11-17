@@ -15,6 +15,7 @@ func main() {
 	}
 	defer file.Close()
 
+	//bufio.NewWriterSize(file, 256)
 	writer := bufio.NewWriter(file)
 	writer.WriteString("hello golang\n")
 	writer.Flush()

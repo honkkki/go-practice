@@ -14,6 +14,9 @@ func test(ch chan int, ch2 chan int) {
 func main() {
 	ch := make(chan int, 6)
 	ch2 := make(chan int, 6)
+	fmt.Println(cap(ch))
+	fmt.Println(len(ch))
+
 	ch <- 1
 	ch <- 2
 	ch <- 3

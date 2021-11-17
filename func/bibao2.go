@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func addBase(base int) func(int) int {
 	return func(i int) int {
 		base += i
@@ -11,5 +9,7 @@ func addBase(base int) func(int) int {
 
 func main() {
 	f := addBase(10)
-	fmt.Println(f(1), f(2))
+	f(1)
+	f(2)
+	//fmt.Println(f(1), f(2))
 }

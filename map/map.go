@@ -31,6 +31,7 @@ func main() {
 	fmt.Println(s1)
 	s1[0] = make(map[string]string, 1) // 初始化内部map
 	s1[0]["name"] = "jisoo"
+	s1[1] = map[string]string{"name": "karina"}
 	fmt.Println(s1)
 
 	map3 := make(map[int][]int, 5) // 值为切片的map
