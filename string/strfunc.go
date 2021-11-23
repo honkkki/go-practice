@@ -7,7 +7,7 @@ import (
 )
 
 // 字符串方法
-func main()  {
+func main() {
 	str := "jisoo"
 	fmt.Println(len(str))
 	fmt.Printf("%s-good \n", str)
@@ -32,7 +32,7 @@ func main()  {
 
 	// 一个中文在utf8下占三个字节 利用索引取值需要考虑字节长度
 	s1 := "哈哈啦"
-	fmt.Println(strings.Index(s1, "啦"))		// 6
+	fmt.Println(strings.Index(s1, "啦")) // 6
 
 	// 整型转为字符串
 	i := 1
@@ -47,5 +47,3 @@ func main()  {
 	fmt.Println(sli1)
 	fmt.Println("len:", sliLength)
 }
-
-

@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func main()  {
+func main() {
 	// error
 	err := errors.New("foo")
 	fmt.Printf("%T %v \n", err, err)

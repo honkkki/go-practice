@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func main()  {
+func main() {
 	now := time.Now()
 	fmt.Println(now)
 	// 时间戳

@@ -4,7 +4,7 @@ import "fmt"
 
 var name = "add"
 
-func init()  {
+func init() {
 	fmt.Println("init")
 	fmt.Println(name)
 }

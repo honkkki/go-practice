@@ -25,7 +25,7 @@ func (m mystring) Read() {
 	fmt.Println("string read")
 }
 
-func (m mystring) Write()  {
+func (m mystring) Write() {
 	fmt.Println("string write")
 }
 

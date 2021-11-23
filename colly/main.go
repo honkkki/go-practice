@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/gocolly/colly"
 	"os"
 	"strings"
+
+	"github.com/gocolly/colly"
 )
 
 // 抓取豆瓣top250电影列表
@@ -17,7 +18,7 @@ func main() {
 
 	c.Limits([]*colly.LimitRule{
 		{
-			DomainGlob: "*.douban.*",
+			DomainGlob:  "*.douban.*",
 			Parallelism: 5,
 		},
 	})
@@ -26,12 +27,12 @@ func main() {
 		fmt.Println(strings.Split(e.ChildAttr("a", "href"), "/")[4],
 			strings.TrimSpace(e.DOM.Find("span.title").Eq(0).Text()))
 
-			file, _ := os.OpenFile("./douban.txt", os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0755)
-			defer file.Close()
-			str := fmt.Sprintf("id: %s    name: %s\n", strings.Split(e.ChildAttr("a", "href"), "/")[4],
-				strings.TrimSpace(e.DOM.Find("span.title").Eq(0).Text()))
+		file, _ := os.OpenFile("./douban.txt", os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0755)
+		defer file.Close()
+		str := fmt.Sprintf("id: %s    name: %s\n", strings.Split(e.ChildAttr("a", "href"), "/")[4],
+			strings.TrimSpace(e.DOM.Find("span.title").Eq(0).Text()))
 
-			file.WriteString(str)
+		file.WriteString(str)
 	})
 
 	c.OnHTML(".paginator a", func(e *colly.HTMLElement) {

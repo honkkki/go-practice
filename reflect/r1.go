@@ -30,8 +30,8 @@ func main() {
 	ref(a)
 
 	// reflect set
-	v := reflect.ValueOf(&a)	// 必须传地址才能改变本身的值
-	v.Elem().SetInt(10)		// 获取指针地址保存的值再设置新的值
+	v := reflect.ValueOf(&a) // 必须传地址才能改变本身的值
+	v.Elem().SetInt(10)      // 获取指针地址保存的值再设置新的值
 	fmt.Println(a)
 
 }

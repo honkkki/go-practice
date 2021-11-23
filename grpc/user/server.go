@@ -5,6 +5,7 @@ import (
 	"net"
 
 	pb "go-practice/grpc/user/pb"
+
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
@@ -14,14 +15,13 @@ type server struct{}
 
 func (s *server) GetUserInfo(ctx context.Context, in *pb.UserReq) (*pb.UserInfo, error) {
 	user := &pb.UserInfo{
-		Id:                   in.Id,
-		Name:                 "karina",
-		Phone:                "111111",
+		Id:    in.Id,
+		Name:  "karina",
+		Phone: "111111",
 	}
 
 	return user, nil
 }
-
 
 func main() {
 	lis, err := net.Listen("tcp", ":9988")
@@ -29,7 +29,7 @@ func main() {
 		fmt.Printf("failed to listen: %v", err)
 		return
 	}
-	s := grpc.NewServer()                  // 创建gRPC服务器
+	s := grpc.NewServer() // 创建gRPC服务器
 	pb.RegisterUserServer(s, &server{})
 
 	reflection.Register(s) //在给定的gRPC服务器上注册服务器反射服务

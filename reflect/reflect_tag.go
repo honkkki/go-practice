@@ -13,7 +13,7 @@ type P struct {
 	name string
 }
 
-func main()  {
+func main() {
 	g := Game{Name: "rainbow"}
 	t := reflect.TypeOf(&g)
 

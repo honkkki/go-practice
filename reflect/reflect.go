@@ -6,7 +6,7 @@ import (
 )
 
 // 反射
-func main()  {
+func main() {
 	var a int8 = 1
 	// 获取类型
 	res := reflect.TypeOf(a)
@@ -20,7 +20,5 @@ func main()  {
 	fmt.Println(data.Int())
 	d := data.Int() + 1
 	fmt.Println(d)
-
-
 
 }

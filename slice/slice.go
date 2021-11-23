@@ -16,8 +16,8 @@ func main() {
 	fmt.Println("------------------------------")
 
 	// 切片扩容
-	var s []int                      // 未初始化
-	var s2 = []int{}                 // 已初始化
+	var s []int      // 未初始化
+	var s2 = []int{} // 已初始化
 	fmt.Println("s", s, s == nil)
 	fmt.Println("s2", s2, s2 == nil)
 	fmt.Println(s == nil, s2 == nil) // true false 容量都为0 需要扩容

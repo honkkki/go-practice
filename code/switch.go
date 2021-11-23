@@ -7,7 +7,7 @@ import (
 
 type Pet struct {
 	Name string
-	Age int
+	Age  int
 }
 
 func main() {
@@ -19,10 +19,10 @@ func main() {
 		fmt.Println("a=1")
 	}
 
-	switch aa:=100; {
-	case aa==1:
+	switch aa := 100; {
+	case aa == 1:
 		fmt.Println("aa=1")
-	case aa==100:
+	case aa == 100:
 		fmt.Println("aa=100")
 	}
 
@@ -34,8 +34,7 @@ func main() {
 	fmt.Println(unsafe.Sizeof(str))
 
 	pet := Pet{}
-	fmt.Println(unsafe.Sizeof(pet))		// 24 string 16+int64 8
-	fmt.Println(unsafe.Sizeof(&pet))	// 8
-
+	fmt.Println(unsafe.Sizeof(pet))  // 24 string 16+int64 8
+	fmt.Println(unsafe.Sizeof(&pet)) // 8
 
 }

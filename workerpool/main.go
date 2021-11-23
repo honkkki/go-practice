@@ -33,7 +33,6 @@ func calc(job *Job, result chan *Result) {
 	result <- r
 }
 
-
 func worker(jobChan chan *Job, resChan chan *Result) {
 	for job := range jobChan {
 		calc(job, resChan)

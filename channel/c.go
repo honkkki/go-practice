@@ -9,7 +9,7 @@ var x int
 var wg sync.WaitGroup
 var ch = make(chan struct{}, 1)
 
-func add()  {
+func add() {
 	//ptr := (*int64)(unsafe.Pointer(&x))
 	//atomic.AddInt64(ptr, 1)
 	// 原子锁
@@ -34,7 +34,7 @@ func main() {
 	num, ok = <-ch
 	fmt.Println(num, ok)
 
-	for x := 0;x<100;x++ {
+	for x := 0; x < 100; x++ {
 		wg.Add(1)
 		go add()
 	}

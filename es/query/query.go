@@ -3,11 +3,12 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/olivere/elastic/v7"
 	"log"
 	"reflect"
 	"strconv"
 	"time"
+
+	"github.com/olivere/elastic/v7"
 )
 
 var client *elastic.Client

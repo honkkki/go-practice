@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	for  {
+	for {
 		var i int
 		var currentTime time.Time
 		i++

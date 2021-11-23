@@ -8,8 +8,8 @@ import (
 var (
 	lockx sync.Mutex
 	xx    int
-	yy int
-	w sync.WaitGroup
+	yy    int
+	w     sync.WaitGroup
 )
 
 func main() {

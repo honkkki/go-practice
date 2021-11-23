@@ -3,17 +3,18 @@ package main
 import (
 	"database/sql"
 	"fmt"
-	_ "github.com/go-sql-driver/mysql"
 	"log"
+
+	_ "github.com/go-sql-driver/mysql"
 )
 
 var DB *sql.DB
 
 type User struct {
-	Id        int64  `db:"id"`
+	Id        int64          `db:"id"`
 	Name      sql.NullString `db:"name"`
-	Age       int    `db:"age"`
-	CreatedAt string `db:"created_at"`
+	Age       int            `db:"age"`
+	CreatedAt string         `db:"created_at"`
 }
 
 func initDb() (err error) {
@@ -24,8 +25,13 @@ func initDb() (err error) {
 		return err
 	}
 
-	//DB.SetMaxOpenConns(200)
-	DB.SetMaxIdleConns(15)		// 空闲连接数
+	err = DB.Ping()
+	if err != nil {
+		return err
+	}
+
+	DB.SetMaxOpenConns(0)
+	DB.SetMaxIdleConns(15) // 空闲连接数
 	return nil
 }
 
@@ -42,7 +48,7 @@ func queryRow() {
 	fmt.Println(user)
 }
 
-func queryRows()  {
+func queryRows() {
 	sqlStr := "select id, name from user"
 	rows, _ := DB.Query(sqlStr)
 	// ***必须关闭连接 否则会占用连接池的连接

@@ -4,16 +4,17 @@ import (
 	"bufio"
 	"bytes"
 	"fmt"
-	"github.com/gocolly/colly"
 	"io"
 	"log"
 	"os"
 	"strings"
 	"sync/atomic"
+
+	"github.com/gocolly/colly"
 )
 
 var (
-	co           *colly.Collector
+	co          *colly.Collector
 	downLoadNum int32
 	cookie      string
 )

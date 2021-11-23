@@ -20,16 +20,11 @@ func main() {
 
 	fmt.Println("--------------------------------")
 
-	sli1 := []int{1,2,3}
+	sli1 := []int{1, 2, 3}
 	sli := make([]int, 0, 10)
 	sli = append(sli, sli1...)
 	fmt.Println(sli)
 	sli2 := sli1[1:]
 	fmt.Println(sli2)
-
-
-
-
-
 
 }

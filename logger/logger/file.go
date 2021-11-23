@@ -38,7 +38,7 @@ func (f *FileLogger) initFile() {
 }
 
 // 根据日期创建日志文件
-func (f *FileLogger) checkSplitDate()  {
+func (f *FileLogger) checkSplitDate() {
 	now := time.Now()
 	nowDate := fmt.Sprintf("%04d%02d%02d", now.Year(), now.Month(), now.Day())
 

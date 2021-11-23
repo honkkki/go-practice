@@ -6,7 +6,7 @@ import (
 )
 
 type connInfo struct {
-	id int
+	id   int
 	conn net.Conn
 }
 

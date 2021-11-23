@@ -6,9 +6,9 @@ type User struct {
 	name string
 }
 
-func main()  {
+func main() {
 	m := make(map[string]User)
-	user, ok  := m["name"]
+	user, ok := m["name"]
 	if !ok {
 		user.name = "tom"
 	}

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main()  {
+func main() {
 	var i interface{}
 	i = make(map[string]interface{})
 	fmt.Printf("%T\n", i)

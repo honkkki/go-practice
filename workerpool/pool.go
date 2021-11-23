@@ -8,7 +8,7 @@ import (
 )
 
 type Task struct {
-	f    func()
+	f func()
 }
 
 func NewTask(f func()) *Task {

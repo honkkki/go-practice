@@ -6,14 +6,14 @@ import (
 )
 
 type Addr struct {
-	name string
-	Province string
-	City string
+	name        string
+	Province    string
+	City        string
 	CreatedTime int
 }
 
 type Email struct {
-	Url string
+	Url         string
 	CreatedTime int
 }
 
@@ -27,11 +27,9 @@ type Emp struct {
 //	fmt.Println("i am emp get")
 //}
 
-func (e Email) Get()  {
+func (e Email) Get() {
 	fmt.Println("i am email get")
 }
-
-
 
 func main() {
 	var u user.User
@@ -40,9 +38,9 @@ func main() {
 	fmt.Println(u)
 
 	emp := Emp{
-		name:  "jisoo",
-		Addr:  Addr{
-			name: "addr name",
+		name: "jisoo",
+		Addr: Addr{
+			name:        "addr name",
 			Province:    "gd",
 			City:        "sz",
 			CreatedTime: 1,

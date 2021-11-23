@@ -9,7 +9,7 @@ type St struct {
 	Name string
 }
 
-func (s *St) Test()  {
+func (s *St) Test() {
 	fmt.Println("i am reflect test function")
 }
 
@@ -18,8 +18,8 @@ func (s *St) Add(x int) int {
 	return x
 }
 
-func main()  {
-	var s *St		// 注意方法定义中的接收者为指针类型
+func main() {
+	var s *St // 注意方法定义中的接收者为指针类型
 	v := reflect.ValueOf(s)
 	t := v.Type()
 

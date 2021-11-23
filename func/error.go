@@ -1,11 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func a() {
 	defer func() {
-		err := recover() // 搭配defer使用
-		if err != nil {
+		pan := recover() // 搭配defer使用
+		if pan != nil {
 			fmt.Println("func error")
 		}
 	}()

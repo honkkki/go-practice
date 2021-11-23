@@ -2,15 +2,16 @@ package main
 
 import (
 	"fmt"
-	"github.com/coreos/etcd/clientv3"
-	"golang.org/x/net/context"
 	"log"
 	"time"
+
+	"github.com/coreos/etcd/clientv3"
+	"golang.org/x/net/context"
 )
 
-func conn()  {
+func conn() {
 	cli, err := clientv3.New(clientv3.Config{
-		Endpoints: []string{"127.0.0.1:2379"},
+		Endpoints:   []string{"127.0.0.1:2379"},
 		DialTimeout: 5 * time.Second,
 	})
 
@@ -21,16 +22,16 @@ func conn()  {
 	fmt.Println("connect etcd success!")
 }
 
-func put()  {
+func put() {
 	cli, err := clientv3.New(clientv3.Config{
-		Endpoints: []string{"127.0.0.1:2379"},
+		Endpoints:   []string{"127.0.0.1:2379"},
 		DialTimeout: 5 * time.Second,
 	})
 	if err != nil {
 		log.Fatal("connect etcd fail: ", err)
 	}
 	defer cli.Close()
-	ctx, cancel := context.WithTimeout(context.Background(), time.Second * 3)
+	ctx, cancel := context.WithTimeout(context.Background(), time.Second*3)
 	_, err = cli.Put(ctx, "name", "karina")
 	cancel()
 	if err != nil {
@@ -39,16 +40,16 @@ func put()  {
 	fmt.Println("put to etcd success!")
 }
 
-func get()  {
+func get() {
 	cli, err := clientv3.New(clientv3.Config{
-		Endpoints: []string{"127.0.0.1:2379"},
+		Endpoints:   []string{"127.0.0.1:2379"},
 		DialTimeout: 5 * time.Second,
 	})
 	if err != nil {
 		log.Fatal("connect etcd fail: ", err)
 	}
 	defer cli.Close()
-	ctx, cancel := context.WithTimeout(context.Background(), time.Second * 3)
+	ctx, cancel := context.WithTimeout(context.Background(), time.Second*3)
 	resp, err := cli.Get(ctx, "name")
 	cancel()
 	if err != nil {
@@ -60,7 +61,7 @@ func get()  {
 	}
 }
 
-func main()  {
+func main() {
 	//conn()
 	//put()
 	get()

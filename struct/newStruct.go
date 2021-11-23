@@ -10,12 +10,11 @@ type Singer struct {
 func newSinger(name string, age int) *Singer {
 	return &Singer{
 		name: name,
-		age: age,
+		age:  age,
 	}
 }
 
-
-func main()  {
+func main() {
 	singer := newSinger("jisoo", 20)
 	fmt.Printf("%#v \n", singer)
 	fmt.Println(singer.name)

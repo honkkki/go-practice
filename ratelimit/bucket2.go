@@ -3,8 +3,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/juju/ratelimit"
 	"time"
+
+	"github.com/juju/ratelimit"
 )
 
 func main() {

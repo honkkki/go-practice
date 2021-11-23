@@ -15,7 +15,7 @@ func testFunc() {
 	fmt.Println(1)
 }
 
-func addFunc(a int)  {
+func addFunc(a int) {
 	a++
 }
 

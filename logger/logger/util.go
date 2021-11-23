@@ -51,7 +51,7 @@ func WriteLog(LogLevel int, args ...interface{}) *LogData {
 	msg := fmt.Sprint(args...)
 
 	logData := &LogData{
-		Message: msg,
+		Message:  msg,
 		TimeStr:  nowTime,
 		LevelStr: levelStr,
 		FileName: fileName,

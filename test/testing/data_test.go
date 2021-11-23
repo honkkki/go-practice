@@ -2,7 +2,6 @@ package testing
 
 import "testing"
 
-
 func BenchmarkFib1(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		fib1(30)

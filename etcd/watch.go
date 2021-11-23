@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/coreos/etcd/clientv3"
-	"golang.org/x/net/context"
 	"log"
 	"time"
+
+	"github.com/coreos/etcd/clientv3"
+	"golang.org/x/net/context"
 )
 
 func watch() {

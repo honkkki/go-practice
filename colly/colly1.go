@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"bytes"
 	"fmt"
-	"github.com/gocolly/colly"
 	"io"
 	"log"
 	"math/rand"
@@ -12,6 +11,8 @@ import (
 	"os"
 	"strconv"
 	"strings"
+
+	"github.com/gocolly/colly"
 )
 
 var (
@@ -95,7 +96,6 @@ func spiderLhc() {
 		//downloadImg(imgUrl, fileName, "./img/lhc")
 		imgC.Visit(imgUrl)
 	})
-
 
 	// 执行下一页
 	c.OnHTML(".photo-wp", func(e *colly.HTMLElement) {

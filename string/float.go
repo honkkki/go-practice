@@ -12,5 +12,4 @@ func main() {
 	fmt.Println(str)
 	fmt.Println(reflect.TypeOf(str))
 
-
 }

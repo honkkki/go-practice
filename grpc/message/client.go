@@ -5,6 +5,7 @@ import (
 	"fmt"
 
 	pb "go-practice/grpc/message/pb"
+
 	"google.golang.org/grpc"
 )
 

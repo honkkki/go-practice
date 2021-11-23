@@ -1,9 +1,10 @@
 package main
 
 import (
-	"github.com/pkg/profile"
 	"math/rand"
 	"strings"
+
+	"github.com/pkg/profile"
 )
 
 const letterBytes = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"

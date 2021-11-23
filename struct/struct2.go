@@ -32,7 +32,7 @@ func main() {
 	fmt.Println(human.Province)
 
 	h1 := Human{}
-	fmt.Println(h1==Human{})
+	fmt.Println(h1 == Human{})
 	fmt.Println(unsafe.Sizeof(h1))
 	fmt.Println(unsafe.Sizeof(human))
 

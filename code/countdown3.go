@@ -16,7 +16,7 @@ func main() {
 	fmt.Println("Commencing countdown.  Press return to abort.")
 
 	//tick := time.Tick(1 * time.Second)		// for循环退出还是继续往tick push值造成泄露
-	tick := time.NewTicker(1 * time.Second) 	// 优化
+	tick := time.NewTicker(1 * time.Second) // 优化
 	defer tick.Stop()
 	for countdown := 10; countdown > 0; countdown-- {
 		fmt.Println(countdown)

@@ -7,8 +7,7 @@ import (
 	"time"
 )
 
-
-func worker1(ctx context.Context)  {
+func worker1(ctx context.Context) {
 	fmt.Println("start working1")
 	go worker2(ctx)
 
@@ -23,7 +22,7 @@ func worker1(ctx context.Context)  {
 	}
 }
 
-func worker2(ctx context.Context)  {
+func worker2(ctx context.Context) {
 	fmt.Println("start working2")
 	for {
 		select {
@@ -36,13 +35,13 @@ func worker2(ctx context.Context)  {
 	}
 }
 
-func main()  {
+func main() {
 	ctx, cancel := context.WithCancel(context.Background())
 	go worker1(ctx)
 
-	time.Sleep(3*time.Second)
+	time.Sleep(3 * time.Second)
 	cancel()
 
-	time.Sleep(2*time.Second)
+	time.Sleep(2 * time.Second)
 	fmt.Println("finish")
 }

@@ -4,11 +4,12 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/Shopify/sarama"
 	"go-practice/es"
 	"log"
 	"os"
 	"os/signal"
+
+	"github.com/Shopify/sarama"
 )
 
 func main() {

@@ -20,7 +20,7 @@ type entry struct {
 
 // A Memo caches the results of calling a Func.
 type Memo struct {
-	f     Func			// http get
+	f     Func // http get
 	cache map[string]*entry
 	mu    sync.Mutex
 }

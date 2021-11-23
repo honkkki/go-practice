@@ -12,21 +12,21 @@ type Dog struct {
 	*Animal
 }
 
-func (d *Dog) move()  {
+func (d *Dog) move() {
 	fmt.Println("dog move")
 }
 
-func (a *Animal) move()  {
+func (a *Animal) move() {
 	fmt.Printf("%s can move \n", a.Name)
 }
 
-func (d *Dog) wang()  {
+func (d *Dog) wang() {
 	fmt.Printf("%s can wangwangwang \n", d.Name)
 }
 
-func main()  {
+func main() {
 	d := Dog{
-		Feet:   4,
+		Feet: 4,
 		Animal: &Animal{
 			Name: "dog",
 		},
@@ -37,4 +37,3 @@ func main()  {
 	d.wang()
 	fmt.Println(d.Name)
 }
-

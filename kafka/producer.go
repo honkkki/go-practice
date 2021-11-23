@@ -4,15 +4,16 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+
 	"github.com/Shopify/sarama"
 )
 
 type Tweet struct {
 	Username string `json:"username"`
-	Message string `json:"message"`
+	Message  string `json:"message"`
 }
 
-func main()  {
+func main() {
 	config := sarama.NewConfig()
 	config.Producer.RequiredAcks = sarama.WaitForAll
 	config.Producer.Partitioner = sarama.NewRandomPartitioner

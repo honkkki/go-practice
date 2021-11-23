@@ -3,8 +3,9 @@ package es
 import (
 	"context"
 	"fmt"
-	"github.com/olivere/elastic/v7"
 	"log"
+
+	"github.com/olivere/elastic/v7"
 )
 
 type Tweet struct {
@@ -16,7 +17,7 @@ var (
 	client *elastic.Client
 )
 
-func InitEs()  {
+func InitEs() {
 	var err error
 	client, err = elastic.NewClient(elastic.SetSniff(false), elastic.SetURL("http://localhost:9200/"))
 	if err != nil {
@@ -25,7 +26,7 @@ func InitEs()  {
 	fmt.Println("connect to es success")
 }
 
-func Insert()  {
+func Insert() {
 	tweet := Tweet{
 		Username: "karina",
 		Message:  "歌手喜欢唱歌",
@@ -45,7 +46,7 @@ func Insert()  {
 	fmt.Println("add success!")
 }
 
-func InsertData(data interface{})  {
+func InsertData(data interface{}) {
 	// add index
 	_, err := client.Index().
 		Index("message").
@@ -60,4 +61,3 @@ func InsertData(data interface{})  {
 
 	fmt.Println("add to elastic success!")
 }
-

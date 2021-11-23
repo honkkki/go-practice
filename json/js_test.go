@@ -2,8 +2,9 @@ package main
 
 import (
 	"encoding/json"
-	jsoniter "github.com/json-iterator/go"
 	"testing"
+
+	jsoniter "github.com/json-iterator/go"
 )
 
 func BenchmarkJsonIter(b *testing.B) {

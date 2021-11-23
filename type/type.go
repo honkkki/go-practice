@@ -8,7 +8,7 @@ type MyInt int
 // 类型别名
 type NewInt = int
 
-func main()  {
+func main() {
 	var num MyInt
 	fmt.Printf("%T \n", num)
 

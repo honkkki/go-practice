@@ -2,18 +2,19 @@ package main
 
 import (
 	"fmt"
-	"github.com/golang/protobuf/proto"
 	"go-practice/protobuf/phone"
 	"io/ioutil"
 	"math/rand"
 	"strconv"
+
+	"github.com/golang/protobuf/proto"
 )
 
 func writeProto(filename string) (err error) {
 	var contactBook phone.ContactBook
 	for i := 0; i < 10; i++ {
 		person := &phone.Person{
-			Id:   int32(i+1),
+			Id:   int32(i + 1),
 			Name: fmt.Sprintf("name%d", i+1),
 		}
 

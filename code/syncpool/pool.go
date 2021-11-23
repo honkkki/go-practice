@@ -7,7 +7,7 @@ import (
 )
 
 type Logger struct {
-	time string
+	time    string
 	content string
 }
 
@@ -16,7 +16,6 @@ var sp = sync.Pool{
 		return new(Logger)
 	},
 }
-
 
 func main() {
 	cached := sp.Get().(*Logger)

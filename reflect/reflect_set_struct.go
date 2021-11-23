@@ -7,10 +7,10 @@ import (
 
 type Singer struct {
 	Name string
-	Age int
+	Age  int
 }
 
-func main()  {
+func main() {
 	var s Singer
 	v := reflect.ValueOf(&s)
 	v.Elem().Field(0).SetString("jisoo")

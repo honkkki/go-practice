@@ -24,8 +24,8 @@ func main() {
 	table := make(chan *Ball)
 	go play("pong", table)
 	go play("ping", table)
-	table<-new(Ball)
-	time.Sleep(3*time.Second)
+	table <- new(Ball)
+	time.Sleep(3 * time.Second)
 	<-table
 	fmt.Println("finish")
 }

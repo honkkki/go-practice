@@ -5,6 +5,7 @@ import (
 	"net"
 
 	pb "go-practice/grpc/server_stream/pb"
+
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 )
@@ -12,7 +13,7 @@ import (
 type server struct{}
 
 func (s *server) SayHelloList(r *pb.HelloRequest, stream pb.Greeter_SayHelloListServer) error {
-	for n:=0;n<6;n++ {
+	for n := 0; n < 6; n++ {
 		_ = stream.Send(&pb.HelloReply{Message: "hello " + r.Name})
 	}
 

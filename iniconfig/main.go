@@ -7,7 +7,7 @@ import (
 	"log"
 )
 
-func main()  {
+func main() {
 	data, _ := ioutil.ReadFile("./ini/config.ini")
 
 	conf := &ini.Config{}

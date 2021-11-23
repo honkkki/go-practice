@@ -7,7 +7,7 @@ import (
 
 func main() {
 	c := make(chan struct{}, 10)
-	c<- struct{}{}
+	c <- struct{}{}
 	s := <-c
 	fmt.Println(unsafe.Sizeof(s))
 
@@ -15,6 +15,5 @@ func main() {
 	//c2 := make(chan int)
 	//m := make(map[chan int]struct{})
 	fmt.Println(c1 == c1)
-
 
 }

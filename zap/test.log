@@ -1,1 +1,21 @@
-{"level":"info","ts":1623129717.1899421,"msg":"Success..{statusCode 15 0 200 OK <nil>} {url 15 0 http://www.google.com <nil>}"}
+{"level":"info","ts":1637647740.2270384,"msg":"Success..{statusCode 15 0 200 OK <nil>} {url 15 0 https://www.google.com <nil>}"}
+{"level":"info","ts":1637647743.0126333,"msg":"Success..{statusCode 15 0 200 OK <nil>} {url 15 0 https://www.google.com <nil>}"}
+{"level":"info","ts":1637647981.6012442,"msg":"Success..{statusCode 15 0 200 OK <nil>} {url 15 0 https://www.google.com <nil>}"}
+{"level":"info","ts":1637648850.4651031,"msg":"Success..","statusCode":"200 OK","url":"https://www.google.com"}
+{"level":"INFO","ts":"2021-11-23T14:30:52.590+0800","msg":"Success..","statusCode":"200 OK","url":"https://www.google.com"}
+{"level":"INFO","ts":"2021-11-23T14:37:13.874+0800","msg":"Success..","statusCode":"200 OK","url":"https://www.google.com"}
+{"level":"INFO","ts":"2021-11-23T14:37:40.847+0800","msg":"Success..","statusCode":"200 OK","url":"https://www.google.com"}
+{"level":"INFO","ts":"2021-11-23T14:37:54.201+0800","msg":"Success..","statusCode":"200 OK","url":"https://www.google.co"}
+{"level":"ERROR","ts":"2021-11-23T14:38:18.707+0800","msg":"Error fetching url..","url":"https://wwww.google.com","error":"Get \"https://wwww.google.com\": EOF"}
+{"level":"ERROR","ts":"2021-11-23T14:39:51.151+0800","msg":"Error fetching url..","url":"https://wwww.google.com","error":"Get \"https://wwww.google.com\": EOF"}
+{"L":"ERROR","T":"2021-11-23T14:43:31.889+0800","M":"Error fetching url..","url":"https://wwww.google.com","error":"Get \"https://wwww.google.com\": EOF"}
+{"L":"INFO","T":"2021-11-23T14:43:59.163+0800","M":"Success..","statusCode":"200 OK","url":"https://www.google.com"}
+{"level":"INFO","ts":"2021-11-23T14:46:41.033+0800","msg":"Success..","statusCode":"200 OK","url":"https://www.google.com"}
+{"L":"DEBUG","T":"2021-11-23T14:54:31.967+0800","M":"","url":"https://www.google.com"}
+{"L":"INFO","T":"2021-11-23T14:54:31.968+0800","M":"Success..","statusCode":"200 OK","url":"https://www.google.com"}
+{"L":"DEBUG","T":"2021-11-23T14:56:02.964+0800","M":"","url":"https://www.google.com"}
+{"L":"INFO","T":"2021-11-23T14:56:02.965+0800","M":"Success..","statusCode":"200 OK","url":"https://www.google.com"}
+{"L":"DEBUG","T":"2021-11-23T14:57:56.368+0800","C":"zap/main.go:55","M":"","url":"https://www.google.com"}
+{"L":"INFO","T":"2021-11-23T14:57:56.368+0800","C":"zap/main.go:56","M":"Success..","statusCode":"200 OK","url":"https://www.google.com"}
+2021-11-23T14:59:26.517+0800	DEBUG	zap/main.go:55		{"url": "https://www.google.com"}
+2021-11-23T14:59:26.518+0800	INFO	zap/main.go:56	Success..	{"statusCode": "200 OK", "url": "https://www.google.com"}

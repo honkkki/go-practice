@@ -32,7 +32,7 @@ func main() {
 
 	arr := [1]int{1}
 	arr2 := [1]int{1}
-	fmt.Println(arr==arr2)		// 数组可以比较
+	fmt.Println(arr == arr2) // 数组可以比较
 
 	//s1 := []int{1}
 	//s2 := []int{1}

@@ -10,10 +10,9 @@ type person struct {
 	name string
 }
 
-func (s student) read()  {
+func (s student) read() {
 	fmt.Println("read")
 }
-
 
 func main() {
 	s := student{name: "gopher"}

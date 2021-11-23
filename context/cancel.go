@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"golang.org/x/net/context"
 	"time"
+
+	"golang.org/x/net/context"
 )
 
 // 使用context实现goroutine的退出

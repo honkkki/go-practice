@@ -10,7 +10,7 @@ func main() {
 	ch := make(chan struct{})
 
 	go func() {
-		for c := range ch {		// error 阻塞
+		for c := range ch { // error 阻塞
 			fmt.Println(c)
 		}
 	}()
@@ -19,7 +19,7 @@ func main() {
 
 	//close(ch)
 
-	select {}		// error no case阻塞
+	select {} // error no case阻塞
 	//go func() {
 	//	ch <- struct{}{}
 	//	close(ch)

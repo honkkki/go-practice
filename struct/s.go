@@ -11,15 +11,15 @@ type Flag struct {
 }
 
 type demo1 struct {
-	a int16		// 2
-	b int32		// 4
-	s string	// 16
+	a int16  // 2
+	b int32  // 4
+	s string // 16
 }
 
 type demo2 struct {
-	a int16		// 2
-	s string	// 16
-	b int32		// 4
+	a int16  // 2
+	s string // 16
+	b int32  // 4
 }
 
 type demo3 struct {

@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/gomodule/redigo/redis"
 	"go-practice/iniconfig/ini"
 	"io/ioutil"
 	"log"
+
+	"github.com/gomodule/redigo/redis"
 )
 
 var (
@@ -31,7 +32,7 @@ func initRedis() (err error) {
 	return nil
 }
 
-func main()  {
+func main() {
 	err := initRedis()
 	if err != nil {
 		log.Fatal(err)

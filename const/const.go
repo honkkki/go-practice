@@ -17,8 +17,8 @@ const (
 	e = 1 << iota // 1
 	f             // 2
 	g             // 4
-	x			  // 8
-	y = e | g | x	// 13 1+4+8
+	x             // 8
+	y = e | g | x // 13 1+4+8
 )
 
 func main() {

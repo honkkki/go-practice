@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/panjf2000/ants/v2"
 	"log"
 	"sync"
+
+	"github.com/panjf2000/ants/v2"
 )
 
 func worker() func() {

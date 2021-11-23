@@ -5,7 +5,6 @@ import (
 	"testing"
 )
 
-
 func TestIniConfig(t *testing.T) {
 	data, err := ioutil.ReadFile("./config.ini")
 	if err != nil {

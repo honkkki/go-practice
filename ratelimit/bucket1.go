@@ -3,11 +3,12 @@ package main
 
 import (
 	"fmt"
-	"go.uber.org/ratelimit"
 	"time"
+
+	"go.uber.org/ratelimit"
 )
 
-func main()  {
+func main() {
 	rl := ratelimit.New(10) // per second
 
 	prev := time.Now()

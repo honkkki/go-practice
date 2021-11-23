@@ -2,17 +2,19 @@ package main
 
 import (
 	"fmt"
-	"github.com/gomodule/redigo/redis"
 	"go-practice/iniconfig/ini"
 	"io/ioutil"
+	"reflect"
 	"time"
+
+	"github.com/gomodule/redigo/redis"
 )
 
 var (
 	Pool *redis.Pool
 )
 
-func init()  {
+func init() {
 	Pool = newPool()
 }
 
@@ -24,6 +26,8 @@ func newPool() *redis.Pool {
 
 	host := cfg.RedisConfig.Host
 	port := cfg.RedisConfig.Port
+	host = "127.0.0.1"
+	port = 6379
 	addr := fmt.Sprintf("%s:%d", host, port)
 
 	return &redis.Pool{
@@ -43,12 +47,14 @@ func newPool() *redis.Pool {
 }
 
 func main() {
-	for {
-		time.Sleep(time.Second)
-		c := Pool.Get()
-		defer c.Close()
-		res, _ := redis.String(c.Do("get", "name"))
-		fmt.Println(res)
-	}
+	c := Pool.Get()
+	defer c.Close()
+	res, _ := redis.String(c.Do("get", "name"))
+	fmt.Println(res)
 
+	num, _ := redis.String(c.Do("get", "num"))
+	fmt.Println(reflect.TypeOf(num))
+
+	num1, _ := redis.Int(c.Do("get", "num"))
+	fmt.Println(reflect.TypeOf(num1))
 }

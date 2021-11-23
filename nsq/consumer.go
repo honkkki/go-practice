@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/nsqio/go-nsq"
 	"log"
 	"time"
+
+	"github.com/nsqio/go-nsq"
 )
 
 type Consumer struct {

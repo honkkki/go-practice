@@ -24,5 +24,4 @@ func main() {
 	fmt.Println(cap(arr))
 	fmt.Println(arr)
 
-
 }

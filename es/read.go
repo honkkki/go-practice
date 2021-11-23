@@ -3,12 +3,13 @@ package es
 import (
 	"context"
 	"fmt"
-	"github.com/olivere/elastic/v7"
 	"log"
 	"reflect"
+
+	"github.com/olivere/elastic/v7"
 )
 
-func Read()  {
+func Read() {
 	//mp := elastic.NewMatchPhraseQuery("message", "i")
 	mp := elastic.NewQueryStringQuery("歌手")
 	res, err := client.Search("message").Query(mp).Do(context.Background())
@@ -38,7 +39,7 @@ func Read()  {
 	}
 }
 
-func ReadData(params string)  {
+func ReadData(params string) {
 	mp := elastic.NewQueryStringQuery(params)
 	res, err := client.Search("message").Query(mp).Do(context.Background())
 	if err != nil {
@@ -53,7 +54,3 @@ func ReadData(params string)  {
 		fmt.Printf("%#v\n", t)
 	}
 }
-
-
-
-

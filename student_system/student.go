@@ -1,14 +1,13 @@
 package main
 
 type Student struct {
-	ID int
+	ID   int
 	Name string
 }
 
 func NewStudent(id int, name string) *Student {
 	return &Student{
-		ID: id,
+		ID:   id,
 		Name: name,
 	}
 }
-
