@@ -66,7 +66,8 @@ func main() {
 	log.Println("server shutting down...")
 	err = s.Shutdown(context.Background())
 	if err != nil {
-		log.Fatal(err)
+		log.Println("shut down error:", err)
+		return
 	}
 
 	log.Println("server exit")
