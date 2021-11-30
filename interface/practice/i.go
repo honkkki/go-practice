@@ -46,6 +46,7 @@ func main() {
 	fmt.Println(i1 == i2)
 
 	var i3 anoInter
+	var i4 inter
 	needInter(i3)
-
+	fmt.Println(i3 == i4)
 }

@@ -1,4 +1,4 @@
 http:
   ip: 127.0.0.1
-  name: golang
+  name: golang server
   port: 9999

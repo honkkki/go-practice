@@ -21,4 +21,5 @@ func main() {
 	s = student(p)
 	fmt.Println(s)
 	fmt.Println(p)
+
 }

@@ -12,7 +12,7 @@ var wgp sync.WaitGroup
 
 func addNum() {
 	for i := 0; i < 1000; i++ {
-		// 原子操作 int 性能比加锁高 加锁需要上下文切换（内核态-用户态）
+		// 原子操作 int 性能比加锁高 加锁需要上下文切换
 		atomic.AddInt32(&testNum, 1)
 		//testNum++
 		time.Sleep(time.Millisecond)

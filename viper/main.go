@@ -18,6 +18,28 @@ var (
 	v *viper.Viper
 )
 
+type User struct {
+	Username string `json:"username"`
+	Age      int    `json:"age"`
+}
+
+func UserRegister(c *gin.Context) {
+	user := new(User)
+	err := c.ShouldBindJSON(user)
+	if err != nil {
+		log.Println(err)
+		c.JSON(http.StatusOK, gin.H{
+			"msg": err.Error(),
+		})
+		return
+	}
+
+	log.Println(user.Username)
+	c.JSON(http.StatusOK, gin.H{
+		"msg": "ok",
+	})
+}
+
 func main() {
 	v = viper.New()
 	v.SetConfigFile("./config.yaml")
@@ -33,7 +55,7 @@ func main() {
 	port := v.GetString("http.port")
 
 	e := gin.Default()
-	e.GET("/", func(context *gin.Context) {
+	e.GET("/config", func(context *gin.Context) {
 		port := v.GetString("http.port")
 		name := v.GetString("http.name")
 		v.Set("http.ip", "127.0.0.1")
@@ -44,6 +66,15 @@ func main() {
 		context.String(http.StatusOK, "%v running on :%v", name, port)
 		return
 	})
+
+	e.GET("/", func(c *gin.Context) {
+		time.Sleep(time.Second * 5)
+		c.JSON(http.StatusOK, gin.H{
+			"msg": "ok",
+		})
+	})
+
+	e.POST("/register", UserRegister)
 
 	s := &http.Server{
 		Addr:         fmt.Sprintf(":%v", port),

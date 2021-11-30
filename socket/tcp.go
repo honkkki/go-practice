@@ -11,7 +11,7 @@ type connInfo struct {
 }
 
 // 处理任务
-func process(connInfo *connInfo) {
+func process(connInfo connInfo) {
 	conn := connInfo.conn
 	defer conn.Close()
 
@@ -41,7 +41,7 @@ func main() {
 	for {
 		id++
 		conn, err := listen.Accept()
-		connInfo := &connInfo{
+		connInfo := connInfo{
 			id:   id,
 			conn: conn,
 		}
