@@ -1,10 +1,22 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
+
+// 接口嵌套
+
+type Writer interface {
+}
+
+type Reader interface {
+	Writer
+}
 
 type Singer struct {
 	name string
 	age  int
+	Writer
 }
 
 func newSinger(name string, age int) *Singer {

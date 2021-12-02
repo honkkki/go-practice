@@ -12,6 +12,7 @@ type Dog struct {
 }
 
 type Cat struct {
+	Name string
 }
 
 type Bird struct {
