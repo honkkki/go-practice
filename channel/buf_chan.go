@@ -17,6 +17,9 @@ func main() {
 	fmt.Println(cap(ch))
 	fmt.Println(len(ch))
 
+	c := make(chan int)
+	fmt.Println(cap(c))
+
 	ch <- 1
 	ch <- 2
 	ch <- 3

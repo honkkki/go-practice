@@ -26,6 +26,14 @@ func main() {
 		fmt.Println("aa=100")
 	}
 
+	aaa := 10
+	switch aaa {
+	case 10:
+		fmt.Println("aaa=10")
+	case 1:
+		fmt.Println("aaa=1")
+	}
+
 	fmt.Println(unsafe.Sizeof(a))
 
 	var num int32 = 1

@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"reflect"
 )
 
 type inter interface {
@@ -49,4 +50,5 @@ func main() {
 	var i4 inter
 	needInter(i3)
 	fmt.Println(i3 == i4)
+	fmt.Println(reflect.DeepEqual(i3, i4))
 }
