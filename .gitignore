@@ -5,6 +5,7 @@ colly/img
 colly/cookie.txt
 colly/*.exe
 **/tmp
+.DS_Store
 
 
 
