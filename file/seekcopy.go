@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"io"
 	"io/ioutil"
 	"log"
@@ -48,6 +49,7 @@ func main() {
 		if err != nil {
 			if err == io.EOF {
 				f3.Truncate(0)
+				fmt.Println("write finish bytes:", haveWrite)
 				break
 			} else {
 				log.Fatal(err)
