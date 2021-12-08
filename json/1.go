@@ -29,4 +29,7 @@ func main() {
 	}
 	b2, _ := jsoniter.Marshal(game2)
 	fmt.Println(string(b2))
+
+	b3, _ := jsoniter.MarshalIndent(game, "", "  ")
+	fmt.Println(string(b3))
 }

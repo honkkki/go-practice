@@ -3,6 +3,8 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
+	"net/http"
 )
 
 func main() {
@@ -26,4 +28,11 @@ func main() {
 	}
 
 	fmt.Println(x)
+
+	resp, err := http.Get("https://www.baidu.com")
+	if err != nil {
+		log.Fatal(err)
+	}
+	// io stream decode
+	json.NewDecoder(resp.Body)
 }
