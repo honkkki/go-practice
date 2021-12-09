@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"unsafe"
+)
 
 func main() {
 	var i interface{}
@@ -11,5 +14,8 @@ func main() {
 	m["name"] = "jisoo"
 	fmt.Println(m)
 	fmt.Printf("%T\n", m)
+
+	var iface interface{}
+	fmt.Println(unsafe.Sizeof(iface)) // 16
 
 }

@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
+	"io"
+	"os"
 	"reflect"
-	"strings"
 )
 
 func ref(a interface{}) {
@@ -19,10 +20,9 @@ func ref(a interface{}) {
 	v := reflect.ValueOf(a)
 	fmt.Println(v)
 	fmt.Println(v.Kind())
-	b := strings.Contains(v.Kind().String(), "int")
-	fmt.Println(b)
+	fmt.Printf("%T\n", v)
 	fmt.Println(v.Int())
-
+	fmt.Println("--------------------------")
 }
 
 func main() {
@@ -31,7 +31,12 @@ func main() {
 
 	// reflect set
 	v := reflect.ValueOf(&a) // 必须传地址才能改变本身的值
-	v.Elem().SetInt(10)      // 获取指针地址保存的值再设置新的值
+	//v.Elem().Set(reflect.ValueOf(int8(10)))
+	v.Elem().SetInt(10) // 获取指针地址保存的值再设置新的值
 	fmt.Println(a)
 
+	var w io.Writer
+	fmt.Println(reflect.TypeOf(w))
+	w = os.Stdout
+	fmt.Println(reflect.TypeOf(w))
 }

@@ -19,7 +19,7 @@ func (s *St) Add(x int) int {
 }
 
 func main() {
-	var s *St // 注意方法定义中的接收者为指针类型
+	s := new(St) // 注意方法定义中的接收者为指针类型
 	v := reflect.ValueOf(s)
 	t := v.Type()
 

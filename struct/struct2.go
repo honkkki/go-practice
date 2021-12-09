@@ -36,4 +36,11 @@ func main() {
 	fmt.Println(unsafe.Sizeof(h1))
 	fmt.Println(unsafe.Sizeof(human))
 
+	h2 := Human{
+		Name:    "karina",
+		Age:     20,
+		Address: new(Address),
+	}
+
+	fmt.Printf("%#v \n", h2)
 }

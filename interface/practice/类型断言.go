@@ -15,11 +15,21 @@ func main() {
 
 	// 空接口判断值类型 接口类型转为具体值类型
 	var itf interface{}
-	itf = 1
+	var num int64 = 100
+	itf = num
 	fmt.Printf("%T\n", itf)
-	v := itf.(int)
-	fmt.Println(v)
-	fmt.Printf("%T\n", v) // int
+	v, ok := itf.(int)
+	if ok {
+		fmt.Println(v)
+		fmt.Printf("%T\n", v) // int
+	} else {
+		fmt.Println(v)
+		fmt.Printf("%T\n", v) // int
+	}
+
+	v1 := itf.(int64)
+	fmt.Println(v1)
+	fmt.Println(reflect.TypeOf(v1))
 
 	fmt.Println("----------------------------------")
 	// switch判断接口类型
