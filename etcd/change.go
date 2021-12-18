@@ -19,11 +19,11 @@ func main() {
 	}
 	defer cli.Close()
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*3)
-	_, err = cli.Put(ctx, "name", "karina best")
-	cancel()
+	_, err = cli.Put(ctx, "name", "hello karina")
+	defer cancel()
 	if err != nil {
 		log.Fatal("put fail: ", err)
 	}
-	fmt.Println("put to etcd success!")
 
+	fmt.Println("put to etcd success!")
 }

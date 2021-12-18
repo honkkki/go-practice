@@ -33,10 +33,11 @@ func put() {
 	defer cli.Close()
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*3)
 	_, err = cli.Put(ctx, "name", "karina")
-	cancel()
+	defer cancel()
 	if err != nil {
 		log.Fatal("put fail: ", err)
 	}
+
 	fmt.Println("put to etcd success!")
 }
 
@@ -51,7 +52,7 @@ func get() {
 	defer cli.Close()
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*3)
 	resp, err := cli.Get(ctx, "name")
-	cancel()
+	defer cancel()
 	if err != nil {
 		log.Fatal("get fail: ", err)
 	}

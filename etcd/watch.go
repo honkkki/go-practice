@@ -19,12 +19,10 @@ func watch() {
 	}
 	defer cli.Close()
 
-	for {
-		ch := cli.Watch(context.Background(), "name")
-		for data := range ch {
-			for _, v := range data.Events {
-				fmt.Printf("watch success, %s - %s : %s\n", v.Type, v.Kv.Key, v.Kv.Value)
-			}
+	ch := cli.Watch(context.Background(), "idol", clientv3.WithPrefix())
+	for data := range ch {
+		for _, v := range data.Events {
+			fmt.Printf("watch success, %s - %s : %s\n", v.Type, v.Kv.Key, v.Kv.Value)
 		}
 	}
 }
