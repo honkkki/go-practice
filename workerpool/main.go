@@ -16,7 +16,7 @@ type Result struct {
 	Sum int
 }
 
-func calc(job *Job, result chan *Result) {
+func calc(job *Job, result chan<- *Result) {
 	var sum int
 	number := job.Number
 	for number != 0 {

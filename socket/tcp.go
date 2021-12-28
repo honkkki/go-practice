@@ -16,7 +16,7 @@ func process(connInfo connInfo) {
 	defer conn.Close()
 
 	for {
-		buf := make([]byte, 512)
+		buf := make([]byte, 1024)
 		n, err := conn.Read(buf)
 
 		if err != nil {
@@ -25,12 +25,12 @@ func process(connInfo connInfo) {
 		}
 
 		fmt.Printf("从客户端id:%d 收到数据: %v\n", connInfo.id, string(buf[:n]))
-		conn.Write([]byte("服务器已收到数据"))
+		conn.Write([]byte("ok by server."))
 	}
 }
 
 func main() {
-	listen, err := net.Listen("tcp", "127.0.0.1:6333")
+	listen, err := net.Listen("tcp", "127.0.0.1:9999")
 	if err != nil {
 		fmt.Printf("start tcp failed: %v \n", err)
 		return
