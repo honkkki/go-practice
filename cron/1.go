@@ -10,6 +10,12 @@ import (
 var a int
 var mu sync.Mutex
 
+func tick(name string) func() {
+	return func() {
+
+	}
+}
+
 func main() {
 	c := cron.New()
 	c.AddFunc("@every 1s", func() {

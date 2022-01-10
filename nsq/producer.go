@@ -24,7 +24,7 @@ func initProducer(addr string) error {
 }
 
 func main() {
-	// nsqd
+	// nsqd tcp address
 	addr := "127.0.0.1:4150"
 	err := initProducer(addr)
 	if err != nil {
@@ -36,6 +36,7 @@ func main() {
 		data, _ := reader.ReadString('\n')
 		data = strings.TrimSpace(data)
 		if data == "stop" {
+			producer.Stop()
 			break
 		}
 

@@ -44,7 +44,7 @@ func initConsumer(topic, channel, addr string) error {
 }
 
 func main() {
-	err := initConsumer("order_info", "goshop", "127.0.0.1:4161")
+	err := initConsumer("order_info", "goshop2", "127.0.0.1:4161")
 	if err != nil {
 		log.Fatal("init consumer failed: " + err.Error())
 	}
