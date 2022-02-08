@@ -18,6 +18,7 @@ func main() {
 	config.Producer.RequiredAcks = sarama.WaitForAll          // 等待ack策略 0 1 -1
 	config.Producer.Partitioner = sarama.NewRandomPartitioner // 分配到哪个分区的算法
 	config.Producer.Return.Successes = true
+	config.ChannelBufferSize = 1024
 	config.Net.MaxOpenRequests = 1
 	config.Producer.Idempotent = true // 保证消息的幂等性
 
@@ -33,17 +34,27 @@ func main() {
 	msg.Value = sarama.StringEncoder(msgData)
 
 	client, err := sarama.NewSyncProducer([]string{"127.0.0.1:9092"}, config)
+	// 异步发送客户端 发送结果通过channel获取
+	aclient, err := sarama.NewAsyncProducer([]string{"127.0.0.1:9092"}, config)
 
 	if err != nil {
 		fmt.Println("producer close, err:", err)
 		return
 	}
 	defer client.Close()
-	pid, offset, err := client.SendMessage(msg)
-	if err != nil {
-		fmt.Println("send message failed, err: ", err)
-		return
-	}
+	defer aclient.Close()
 
-	fmt.Printf("pid:%v offset:%v\n", pid, offset)
+	input := aclient.Input()
+
+	input <- msg
+	success := aclient.Successes()
+	data := <-success
+	fmt.Println(data.Topic)
+
+	//pid, offset, err := client.SendMessage(msg)
+	//if err != nil {
+	//	fmt.Println("send message failed, err: ", err)
+	//	return
+	//}
+	//fmt.Printf("pid:%v offset:%v\n", pid, offset)
 }
