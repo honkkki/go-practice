@@ -8,16 +8,16 @@ import (
 
 var done = make(chan struct{})
 
-func canceled() bool {
+func canceled() {
 	for {
 		time.Sleep(1 * time.Second)
 
 		select {
 		case <-done:
 			fmt.Println("收到退出信号")
-			return true
+			os.Exit(0)
 		default:
-			return false
+			fmt.Println("working...")
 		}
 
 	}
@@ -30,11 +30,8 @@ func main() {
 		close(done) // close channel后继续读取channel的值不阻塞 可以实现广播效果，退出其他goroutine
 	}()
 
+	canceled()
 	for {
-		bo := canceled()
-		if bo {
-			return
-		}
-		fmt.Println(bo)
+
 	}
 }

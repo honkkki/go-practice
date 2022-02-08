@@ -16,12 +16,12 @@ type client chan string
 var (
 	entering = make(chan client)
 	leaving  = make(chan client)
-	messages = make(chan string)
+	messages = make(chan string, 10)
 )
 
 // broadcaster 其他goroutine通过操作channel来改变map 且只有一个goroutine执行该函数 没有并发竞争问题
 func broadcaster(ctx context.Context, wg *sync.WaitGroup) {
-	clients := make(map[client]bool)
+	clients := make(map[client]struct{})
 	for {
 		select {
 		case msg := <-messages:
@@ -30,11 +30,11 @@ func broadcaster(ctx context.Context, wg *sync.WaitGroup) {
 				cli <- msg
 			}
 		case cli := <-entering:
-			clients[cli] = true
+			clients[cli] = struct{}{}
 
 		case cli := <-leaving:
 			delete(clients, cli)
-			close(cli) // 关闭下面的ch
+			close(cli) // 关闭下面clientWriter的ch
 		case <-ctx.Done():
 			fmt.Println("broadcaster quit")
 			wg.Done()
@@ -44,7 +44,7 @@ func broadcaster(ctx context.Context, wg *sync.WaitGroup) {
 }
 
 func handleConn(conn net.Conn) {
-	cli := make(chan string) // outgoing client messages
+	cli := make(chan string, 10) // outgoing client messages
 	go clientWriter(conn, cli)
 
 	who := conn.RemoteAddr().String()

@@ -2,9 +2,7 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
-	"go-practice/es"
 	"log"
 	"os"
 	"os/signal"
@@ -13,7 +11,7 @@ import (
 )
 
 func main() {
-	es.InitEs()
+	//es.InitEs()
 	consumer, err := sarama.NewConsumer([]string{"127.0.0.1:9092"}, nil)
 	if err != nil {
 		fmt.Printf("failed to start consumer: %s\n", err)
@@ -29,7 +27,7 @@ func main() {
 	c := make(chan os.Signal, 1)
 	signal.Notify(c, os.Interrupt)
 
-	partitionList, err := consumer.Partitions("message")
+	partitionList, err := consumer.Partitions("test")
 	if err != nil {
 		fmt.Println("failed to get the list of partitions: ", err)
 		return
@@ -37,7 +35,7 @@ func main() {
 	fmt.Println(partitionList)
 
 	for partition := range partitionList {
-		pc, err := consumer.ConsumePartition("message", int32(partition), sarama.OffsetNewest)
+		pc, err := consumer.ConsumePartition("test", int32(partition), sarama.OffsetNewest)
 		if err != nil {
 			fmt.Printf("Failed to start consumer for partition %d: %s\n", partition, err)
 			return
@@ -47,13 +45,13 @@ func main() {
 			for msg := range pc1.Messages() {
 				fmt.Printf("Partition:%d, Offset:%d, Key:%s, Value:%s\n", msg.Partition, msg.Offset, string(msg.Key), string(msg.Value))
 				// 处理消息
-				var tweet es.Tweet
-				err := json.Unmarshal(msg.Value, &tweet)
-				if err != nil {
-					fmt.Println("unmarshal fail: ", err)
-				}
-				fmt.Printf("%#v\n", tweet)
-				es.InsertData(tweet)
+				//var tweet es.Tweet
+				//err := json.Unmarshal(msg.Value, &tweet)
+				//if err != nil {
+				//fmt.Println("unmarshal fail: ", err)
+				//}
+				//fmt.Printf("%#v\n", tweet)
+				//es.InsertData(tweet)
 			}
 		}(pc)
 	}

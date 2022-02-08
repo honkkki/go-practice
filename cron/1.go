@@ -36,7 +36,5 @@ func main() {
 
 	c.Start()
 
-	for {
-
-	}
+	select {}
 }
