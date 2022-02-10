@@ -4,6 +4,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"time"
 
 	"github.com/Shopify/sarama"
 )
@@ -46,10 +47,13 @@ func main() {
 
 	input := aclient.Input()
 
-	input <- msg
-	success := aclient.Successes()
-	data := <-success
-	fmt.Println(data.Topic)
+	for {
+		input <- msg
+		success := aclient.Successes()
+		data := <-success
+		fmt.Println("topic", data.Topic, "Partition", data.Partition, "offset", data.Offset)
+		time.Sleep(1 * time.Second)
+	}
 
 	//pid, offset, err := client.SendMessage(msg)
 	//if err != nil {
