@@ -31,7 +31,5 @@ func main() {
 	}()
 
 	canceled()
-	for {
-
-	}
+	select {}
 }
