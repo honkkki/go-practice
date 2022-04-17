@@ -3,13 +3,10 @@ package main
 import "fmt"
 
 type Addable interface {
-	type int, int8, int16, int32, int64,
-		uint, uint8, uint16, uint32, uint64, uintptr,
-		float32, float64, complex64, complex128,
-		string
+	int | int8 | int16 | int32 | int64
 }
 
-func print[T any](s []T) {
+func GenPrint[T any](s []T) {
 	for _, v := range s {
 		fmt.Println(v)
 	}
@@ -20,7 +17,7 @@ func add[T Addable](a, b T) T {
 }
 
 // 闭包
-func anony[T Addable](a,b T) func() T {
+func anony[T Addable](a, b T) func() T {
 	return func() T {
 		r := a
 		a = a + b
@@ -30,13 +27,11 @@ func anony[T Addable](a,b T) func() T {
 
 func main() {
 	s1 := []string{"golang", "hello"}
-	s2 := []int{1, 2, 3}
-	print(s1)
-	print(s2)
+	s2 := []int64{1, 2, 3}
+	GenPrint(s1)
+	GenPrint(s2)
 
 	fmt.Println(add(1, 2))
-	fmt.Println(add(1.1, 2.2))
-	fmt.Println(add("hello ", "golang"))
 
 	f := anony(0, 1)
 	fmt.Println(f())
