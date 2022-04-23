@@ -73,13 +73,24 @@ func query() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	var res []bson.M
-	if err := c.All(context.Background(), &res); err != nil {
-		log.Fatal(err)
-	}
+	// use bson.M
+	//var res []bson.M
+	//if err := c.All(context.Background(), &res); err != nil {
+	//	log.Fatal(err)
+	//}
+	//
+	//for _, v := range res {
+	//	fmt.Println(v)
+	//}
 
-	for _, v := range res {
-		fmt.Println(v)
+	// use struct query data
+	for c.Next(context.TODO()) {
+		var s Student
+		err := c.Decode(&s)
+		if err != nil {
+			log.Fatal(err)
+		}
+		fmt.Println(s)
 	}
 }
 
