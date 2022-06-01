@@ -9,7 +9,7 @@ replace (
 
 require (
 	github.com/PuerkitoBio/goquery v1.6.1 // indirect
-	github.com/Shopify/sarama v1.29.0
+	github.com/Shopify/sarama v1.30.0
 	github.com/andybalholm/cascadia v1.2.0 // indirect
 	github.com/antchfx/htmlquery v1.2.3 // indirect
 	github.com/antchfx/xmlquery v1.3.6 // indirect
@@ -19,8 +19,6 @@ require (
 	github.com/coreos/go-systemd v0.0.0-20191104093116-d3cd4ed1dbcf // indirect
 	github.com/coreos/pkg v0.0.0-20180928190104-399ea9e2e55f // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.0 // indirect
-	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
-	github.com/dustin/go-humanize v1.0.0 // indirect
 	github.com/gin-gonic/gin v1.5.0
 	github.com/go-playground/universal-translator v0.17.0 // indirect
 	github.com/go-sql-driver/mysql v1.6.0
@@ -30,10 +28,8 @@ require (
 	github.com/golang/protobuf v1.5.2
 	github.com/gomodule/redigo v2.0.0+incompatible
 	github.com/google/btree v1.0.1 // indirect
-	github.com/google/uuid v1.2.0 // indirect
 	github.com/gorilla/websocket v1.4.2
 	github.com/grpc-ecosystem/go-grpc-middleware v1.2.0 // indirect
-	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0 // indirect
 	github.com/jmoiron/sqlx v1.3.4
 	github.com/jonboulle/clockwork v0.2.2 // indirect
 	github.com/json-iterator/go v1.1.12
@@ -45,13 +41,9 @@ require (
 	github.com/olivere/elastic/v7 v7.0.22
 	github.com/panjf2000/ants/v2 v2.4.6
 	github.com/pkg/profile v1.6.0
-	github.com/prometheus/client_golang v1.5.1 // indirect
-	github.com/prometheus/common v0.10.0 // indirect
-	github.com/prometheus/procfs v0.6.0 // indirect
 	github.com/robfig/cron/v3 v3.0.1
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
 	github.com/saintfish/chardet v0.0.0-20120816061221-3af4cd4741ca // indirect
-	github.com/sirupsen/logrus v1.6.0 // indirect
 	github.com/soheilhy/cmux v0.1.5 // indirect
 	github.com/sony/sonyflake v1.0.0
 	github.com/spf13/viper v1.9.0
@@ -59,15 +51,12 @@ require (
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20201229170055-e5319fda7802 // indirect
 	github.com/urfave/cli/v2 v2.3.0
 	github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2 // indirect
+	github.com/zeromicro/go-zero v1.3.3
 	go.mongodb.org/mongo-driver v1.9.0
-	go.uber.org/atomic v1.8.0 // indirect
-	go.uber.org/multierr v1.7.0 // indirect
 	go.uber.org/ratelimit v0.2.0
-	go.uber.org/zap v1.17.0
-	golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d
+	go.uber.org/zap v1.21.0
+	golang.org/x/net v0.0.0-20220421235706-1d1ef9303861
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
-	golang.org/x/time v0.0.0-20210611083556-38a9dc6acbc6 // indirect
-	google.golang.org/grpc v1.40.0
+	google.golang.org/grpc v1.46.0
 	gopkg.in/olahol/melody.v1 v1.0.0-20170518105555-d52139073376
-	sigs.k8s.io/yaml v1.2.0 // indirect
 )
