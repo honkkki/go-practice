@@ -30,7 +30,7 @@ func main() {
 
 	msgData, _ := json.Marshal(tweet)
 	msg := &sarama.ProducerMessage{}
-	msg.Topic = "test"
+	msg.Topic = "trade_v3_order_his"
 	//msg.Key = sarama.StringEncoder("test_key")
 	msg.Value = sarama.StringEncoder(msgData)
 
