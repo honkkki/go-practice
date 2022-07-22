@@ -12,5 +12,8 @@ func main() {
 		return 1, nil
 	}
 	sk := sonyflake.NewSonyflake(st)
-	fmt.Println(sk.NextID())
+	uid, _ := sk.NextID()
+	fmt.Println(uid)
+	fmt.Println(uid % 10)
+
 }
