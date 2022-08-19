@@ -30,19 +30,19 @@ func main() {
 
 	msgData, _ := json.Marshal(tweet)
 	msg := &sarama.ProducerMessage{}
-	msg.Topic = "trade_v3_order_his"
+	msg.Topic = "grid_persistence_test"
 	//msg.Key = sarama.StringEncoder("test_key")
 	msg.Value = sarama.StringEncoder(msgData)
 
-	client, err := sarama.NewSyncProducer([]string{"127.0.0.1:9092"}, config)
+	//client, err := sarama.NewSyncProducer([]string{"127.0.0.1:9092"}, config)
 	// 异步发送客户端 发送结果通过channel获取
-	aclient, err := sarama.NewAsyncProducer([]string{"127.0.0.1:9092"}, config)
+	aclient, err := sarama.NewAsyncProducer([]string{"192.168.1.7:39092"}, config)
 
 	if err != nil {
 		fmt.Println("producer close, err:", err)
 		return
 	}
-	defer client.Close()
+	//defer client.Close()
 	defer aclient.Close()
 
 	input := aclient.Input()

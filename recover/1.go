@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+	// goroutine自己捕获自己的panic
 	defer func() {
 		if err := recover(); err != nil {
 			log.Println("catch panic:", err)
