@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"go-practice/kafka/handler"
+	"go-practice/lib/kafka/handler"
 	"log"
 	"sync"
 
@@ -15,7 +15,7 @@ var (
 
 func init() {
 	cfg2 = sarama.NewConfig()
-	cfg2.Consumer.Group.Rebalance.Strategy = sarama.BalanceStrategyRoundRobin
+	cfg2.Consumer.Group.Rebalance.Strategy = sarama.BalanceStrategySticky
 	cfg2.Consumer.Offsets.AutoCommit.Enable = true
 	cfg2.Consumer.Offsets.Initial = sarama.OffsetNewest
 }

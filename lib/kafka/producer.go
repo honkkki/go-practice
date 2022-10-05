@@ -4,6 +4,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"time"
 
 	"github.com/Shopify/sarama"
@@ -36,7 +37,7 @@ func main() {
 
 	//client, err := sarama.NewSyncProducer([]string{"127.0.0.1:9092"}, config)
 	// 异步发送客户端 发送结果通过channel获取
-	aclient, err := sarama.NewAsyncProducer([]string{"192.168.1.7:39092"}, config)
+	aclient, err := sarama.NewAsyncProducer([]string{"127.0.0.1:9092"}, config)
 
 	if err != nil {
 		fmt.Println("producer close, err:", err)
@@ -47,11 +48,29 @@ func main() {
 
 	input := aclient.Input()
 
+	type handleErrFunc func(success *sarama.ProducerMessage, err *sarama.ProducerError)
+
+	go func(callback handleErrFunc) {
+		for {
+			select {
+			case success := <-aclient.Successes():
+				callback(success, nil)
+			case errMsg := <-aclient.Errors():
+				callback(nil, errMsg)
+			}
+		}
+	}(func(success *sarama.ProducerMessage, err *sarama.ProducerError) {
+		if err != nil {
+			log.Println("[error]", err.Err)
+			return
+		}
+
+		log.Println("[success]", "topic", success.Topic, "Partition", success.Partition, "offset", success.Offset)
+	})
+
 	for {
 		input <- msg
-		success := aclient.Successes()
-		data := <-success
-		fmt.Println("topic", data.Topic, "Partition", data.Partition, "offset", data.Offset)
+
 		time.Sleep(1 * time.Second)
 	}
 

@@ -48,7 +48,12 @@ func main() {
 
 	var i3 anoInter
 	var i4 inter
+	i3 = m2
+	i4 = m1
+
 	needInter(i3)
 	fmt.Println(i3 == i4)
 	fmt.Println(reflect.DeepEqual(i3, i4))
+	fmt.Println(reflect.TypeOf(i3))
+	fmt.Println(reflect.TypeOf(i4))
 }

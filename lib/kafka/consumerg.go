@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"go-practice/kafka/handler"
+	"go-practice/lib/kafka/handler"
 	"log"
 	"sync"
 
